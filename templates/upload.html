@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'blog:upload' %}" method="post" class="comment-form" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="col-md-4">
+                    {{ form.file }}
+                    {{ form.file.errors }}
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="comment-btn">提交</button>
+                </div>
+</body>
+</html>

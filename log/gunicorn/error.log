@@ -1,0 +1,2039 @@
+[2018-12-22 16:33:32 +0800] [12083] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 16:33:32 +0800] [12083] [INFO] Listening at: http://0.0.0.0:80 (12083)
+[2018-12-22 16:33:32 +0800] [12083] [INFO] Using worker: sync
+[2018-12-22 16:33:32 +0800] [12086] [INFO] Booting worker with pid: 12086
+[2018-12-22 16:33:32 +0800] [12088] [INFO] Booting worker with pid: 12088
+[2018-12-22 16:33:32 +0800] [12089] [INFO] Booting worker with pid: 12089
+[2018-12-22 16:33:33 +0800] [12086] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:33:33 +0800] [12086] [INFO] Worker exiting (pid: 12086)
+[2018-12-22 16:33:33 +0800] [12088] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:33:33 +0800] [12088] [INFO] Worker exiting (pid: 12088)
+[2018-12-22 16:33:33 +0800] [12089] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:33:33 +0800] [12089] [INFO] Worker exiting (pid: 12089)
+[2018-12-22 16:33:33 +0800] [12083] [INFO] Shutting down: Master
+[2018-12-22 16:33:33 +0800] [12083] [INFO] Reason: Worker failed to boot.
+[2018-12-22 16:38:06 +0800] [12132] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 16:38:06 +0800] [12132] [INFO] Listening at: http://0.0.0.0:80 (12132)
+[2018-12-22 16:38:06 +0800] [12132] [INFO] Using worker: sync
+[2018-12-22 16:38:06 +0800] [12135] [INFO] Booting worker with pid: 12135
+[2018-12-22 16:38:06 +0800] [12137] [INFO] Booting worker with pid: 12137
+[2018-12-22 16:38:06 +0800] [12138] [INFO] Booting worker with pid: 12138
+[2018-12-22 16:38:07 +0800] [12135] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:38:07 +0800] [12135] [INFO] Worker exiting (pid: 12135)
+[2018-12-22 16:38:07 +0800] [12137] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:38:07 +0800] [12137] [INFO] Worker exiting (pid: 12137)
+[2018-12-22 16:38:07 +0800] [12138] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:38:07 +0800] [12138] [INFO] Worker exiting (pid: 12138)
+[2018-12-22 16:41:06 +0800] [12157] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 16:41:06 +0800] [12157] [INFO] Listening at: http://0.0.0.0:80 (12157)
+[2018-12-22 16:41:06 +0800] [12157] [INFO] Using worker: sync
+[2018-12-22 16:41:06 +0800] [12160] [INFO] Booting worker with pid: 12160
+[2018-12-22 16:41:06 +0800] [12161] [INFO] Booting worker with pid: 12161
+[2018-12-22 16:41:06 +0800] [12162] [INFO] Booting worker with pid: 12162
+[2018-12-22 16:41:07 +0800] [12160] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:41:07 +0800] [12160] [INFO] Worker exiting (pid: 12160)
+[2018-12-22 16:41:07 +0800] [12161] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:41:07 +0800] [12161] [INFO] Worker exiting (pid: 12161)
+[2018-12-22 16:41:07 +0800] [12162] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/root/django1.10.6/lib/python3.5/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/root/django1.10.6/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/root/django1.10.6/lib/python3.5/site-packages/haystack/admin.py", line 13, in <module>
+    from haystack import connections
+ImportError: cannot import name 'connections'
+[2018-12-22 16:41:07 +0800] [12162] [INFO] Worker exiting (pid: 12162)
+[2018-12-22 16:41:07 +0800] [12157] [INFO] Shutting down: Master
+[2018-12-22 16:41:07 +0800] [12157] [INFO] Reason: Worker failed to boot.
+[2018-12-22 16:52:50 +0800] [12288] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 16:52:50 +0800] [12288] [INFO] Listening at: http://0.0.0.0:80 (12288)
+[2018-12-22 16:52:50 +0800] [12288] [INFO] Using worker: sync
+[2018-12-22 16:52:50 +0800] [12291] [INFO] Booting worker with pid: 12291
+[2018-12-22 16:52:50 +0800] [12292] [INFO] Booting worker with pid: 12292
+[2018-12-22 16:52:50 +0800] [12293] [INFO] Booting worker with pid: 12293
+[2018-12-22 16:52:51 +0800] [12291] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ImportError: No module named 'myblog.wsgi.py'; 'myblog.wsgi' is not a package
+[2018-12-22 16:52:51 +0800] [12291] [INFO] Worker exiting (pid: 12291)
+[2018-12-22 16:52:51 +0800] [12292] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ImportError: No module named 'myblog.wsgi.py'; 'myblog.wsgi' is not a package
+[2018-12-22 16:52:51 +0800] [12292] [INFO] Worker exiting (pid: 12292)
+[2018-12-22 16:52:51 +0800] [12293] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ImportError: No module named 'myblog.wsgi.py'; 'myblog.wsgi' is not a package
+[2018-12-22 16:52:51 +0800] [12293] [INFO] Worker exiting (pid: 12293)
+[2018-12-22 16:52:51 +0800] [12288] [INFO] Shutting down: Master
+[2018-12-22 16:52:51 +0800] [12288] [INFO] Reason: Worker failed to boot.
+[2018-12-22 16:55:30 +0800] [12313] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 16:55:30 +0800] [12313] [INFO] Listening at: http://0.0.0.0:80 (12313)
+[2018-12-22 16:55:30 +0800] [12313] [INFO] Using worker: sync
+[2018-12-22 16:55:30 +0800] [12316] [INFO] Booting worker with pid: 12316
+[2018-12-22 16:55:30 +0800] [12318] [INFO] Booting worker with pid: 12318
+[2018-12-22 16:55:30 +0800] [12319] [INFO] Booting worker with pid: 12319
+[2018-12-22 16:58:41 +0800] [12313] [INFO] Handling signal: hup
+[2018-12-22 16:58:41 +0800] [12313] [INFO] Hang up: Master
+[2018-12-22 16:58:41 +0800] [12316] [INFO] Worker exiting (pid: 12316)
+[2018-12-22 16:58:41 +0800] [12318] [INFO] Worker exiting (pid: 12318)
+[2018-12-22 16:58:41 +0800] [12319] [INFO] Worker exiting (pid: 12319)
+[2018-12-22 16:58:41 +0800] [12374] [INFO] Booting worker with pid: 12374
+[2018-12-22 16:58:41 +0800] [12375] [INFO] Booting worker with pid: 12375
+[2018-12-22 16:58:41 +0800] [12373] [INFO] Booting worker with pid: 12373
+[2018-12-22 16:59:29 +0800] [12384] [INFO] Booting worker with pid: 12384
+[2018-12-22 16:59:29 +0800] [12386] [INFO] Booting worker with pid: 12386
+[2018-12-22 16:59:29 +0800] [12387] [INFO] Booting worker with pid: 12387
+[2018-12-22 16:59:29 +0800] [12313] [INFO] Handling signal: hup
+[2018-12-22 16:59:29 +0800] [12313] [INFO] Hang up: Master
+[2018-12-22 16:59:29 +0800] [12388] [INFO] Booting worker with pid: 12388
+[2018-12-22 16:59:29 +0800] [12389] [INFO] Booting worker with pid: 12389
+[2018-12-22 16:59:29 +0800] [12390] [INFO] Booting worker with pid: 12390
+[2018-12-22 16:59:30 +0800] [12384] [INFO] Worker exiting (pid: 12384)
+[2018-12-22 16:59:31 +0800] [12386] [INFO] Worker exiting (pid: 12386)
+[2018-12-22 16:59:31 +0800] [12387] [INFO] Worker exiting (pid: 12387)
+[2018-12-22 17:00:01 +0800] [12389] [INFO] Parent changed, shutting down: <Worker 12389>
+[2018-12-22 17:00:01 +0800] [12389] [INFO] Worker exiting (pid: 12389)
+[2018-12-22 17:00:01 +0800] [12388] [INFO] Parent changed, shutting down: <Worker 12388>
+[2018-12-22 17:00:01 +0800] [12388] [INFO] Worker exiting (pid: 12388)
+[2018-12-22 17:00:01 +0800] [12390] [INFO] Parent changed, shutting down: <Worker 12390>
+[2018-12-22 17:00:01 +0800] [12390] [INFO] Worker exiting (pid: 12390)
+[2018-12-22 17:00:39 +0800] [12418] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 17:00:39 +0800] [12418] [INFO] Listening at: http://0.0.0.0:80 (12418)
+[2018-12-22 17:00:39 +0800] [12418] [INFO] Using worker: sync
+[2018-12-22 17:00:39 +0800] [12421] [INFO] Booting worker with pid: 12421
+[2018-12-22 17:00:39 +0800] [12423] [INFO] Booting worker with pid: 12423
+[2018-12-22 17:00:39 +0800] [12424] [INFO] Booting worker with pid: 12424
+[2018-12-22 17:06:17 +0800] [12418] [INFO] Handling signal: term
+[2018-12-22 17:06:17 +0800] [12421] [INFO] Worker exiting (pid: 12421)
+[2018-12-22 17:06:17 +0800] [12423] [INFO] Worker exiting (pid: 12423)
+[2018-12-22 17:06:22 +0800] [12424] [INFO] Worker exiting (pid: 12424)
+[2018-12-22 17:06:22 +0800] [12418] [INFO] Shutting down: Master
+[2018-12-22 17:06:23 +0800] [12468] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 17:06:23 +0800] [12468] [INFO] Listening at: http://0.0.0.0:80 (12468)
+[2018-12-22 17:06:23 +0800] [12468] [INFO] Using worker: sync
+[2018-12-22 17:06:23 +0800] [12471] [INFO] Booting worker with pid: 12471
+[2018-12-22 17:06:23 +0800] [12472] [INFO] Booting worker with pid: 12472
+[2018-12-22 17:06:23 +0800] [12474] [INFO] Booting worker with pid: 12474
+[2018-12-22 17:16:33 +0800] [12468] [CRITICAL] WORKER TIMEOUT (pid:12472)
+[2018-12-22 17:16:33 +0800] [12472] [INFO] Worker exiting (pid: 12472)
+[2018-12-22 17:16:33 +0800] [12528] [INFO] Booting worker with pid: 12528
+[2018-12-22 17:21:55 +0800] [12468] [INFO] Handling signal: term
+[2018-12-22 17:21:55 +0800] [12471] [INFO] Worker exiting (pid: 12471)
+[2018-12-22 17:21:55 +0800] [12528] [INFO] Worker exiting (pid: 12528)
+[2018-12-22 17:21:57 +0800] [12474] [INFO] Worker exiting (pid: 12474)
+[2018-12-22 17:21:57 +0800] [12468] [INFO] Shutting down: Master
+[2018-12-22 17:21:58 +0800] [12560] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 17:21:58 +0800] [12560] [INFO] Listening at: http://0.0.0.0:80 (12560)
+[2018-12-22 17:21:58 +0800] [12560] [INFO] Using worker: sync
+[2018-12-22 17:21:58 +0800] [12563] [INFO] Booting worker with pid: 12563
+[2018-12-22 17:21:59 +0800] [12565] [INFO] Booting worker with pid: 12565
+[2018-12-22 17:21:59 +0800] [12566] [INFO] Booting worker with pid: 12566
+[2018-12-22 21:21:40 +0800] [12560] [CRITICAL] WORKER TIMEOUT (pid:12565)
+[2018-12-22 21:21:40 +0800] [12565] [INFO] Worker exiting (pid: 12565)
+[2018-12-22 21:21:40 +0800] [13771] [INFO] Booting worker with pid: 13771
+[2018-12-22 22:41:05 +0800] [12560] [INFO] Handling signal: term
+[2018-12-22 22:41:05 +0800] [12563] [INFO] Worker exiting (pid: 12563)
+[2018-12-22 22:41:05 +0800] [13771] [INFO] Worker exiting (pid: 13771)
+[2018-12-22 22:41:05 +0800] [12566] [INFO] Worker exiting (pid: 12566)
+[2018-12-22 22:41:05 +0800] [12560] [INFO] Shutting down: Master
+[2018-12-22 22:41:07 +0800] [14720] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 22:41:07 +0800] [14720] [INFO] Listening at: http://0.0.0.0:80 (14720)
+[2018-12-22 22:41:07 +0800] [14720] [INFO] Using worker: sync
+[2018-12-22 22:41:07 +0800] [14723] [INFO] Booting worker with pid: 14723
+[2018-12-22 22:41:07 +0800] [14724] [INFO] Booting worker with pid: 14724
+[2018-12-22 22:41:07 +0800] [14725] [INFO] Booting worker with pid: 14725
+[2018-12-22 22:58:48 +0800] [14720] [INFO] Handling signal: term
+[2018-12-22 22:58:48 +0800] [14725] [INFO] Worker exiting (pid: 14725)
+[2018-12-22 22:58:48 +0800] [14723] [INFO] Worker exiting (pid: 14723)
+[2018-12-22 22:58:59 +0800] [14959] [INFO] Starting gunicorn 19.9.0
+[2018-12-22 22:58:59 +0800] [14959] [INFO] Listening at: http://0.0.0.0:81 (14959)
+[2018-12-22 22:58:59 +0800] [14959] [INFO] Using worker: sync
+[2018-12-22 22:58:59 +0800] [14962] [INFO] Booting worker with pid: 14962
+[2018-12-22 22:58:59 +0800] [14964] [INFO] Booting worker with pid: 14964
+[2018-12-22 22:58:59 +0800] [14965] [INFO] Booting worker with pid: 14965
+[2018-12-22 22:59:00 +0800] [14724] [INFO] Worker exiting (pid: 14724)
+[2018-12-23 09:26:33 +0800] [14959] [INFO] Handling signal: term
+[2018-12-23 09:26:33 +0800] [14962] [INFO] Worker exiting (pid: 14962)
+[2018-12-23 09:26:33 +0800] [14964] [INFO] Worker exiting (pid: 14964)
+[2018-12-23 09:26:33 +0800] [14965] [INFO] Worker exiting (pid: 14965)
+[2018-12-23 09:26:33 +0800] [14959] [INFO] Shutting down: Master
+[2018-12-23 09:26:35 +0800] [18607] [INFO] Starting gunicorn 19.9.0
+[2018-12-23 09:26:35 +0800] [18607] [INFO] Listening at: http://0.0.0.0:81 (18607)
+[2018-12-23 09:26:35 +0800] [18607] [INFO] Using worker: sync
+[2018-12-23 09:26:35 +0800] [18610] [INFO] Booting worker with pid: 18610
+[2018-12-23 09:26:35 +0800] [18611] [INFO] Booting worker with pid: 18611
+[2018-12-23 09:26:35 +0800] [18613] [INFO] Booting worker with pid: 18613
+[2018-12-23 09:41:54 +0800] [18607] [INFO] Handling signal: term
+[2018-12-23 09:41:54 +0800] [18610] [INFO] Worker exiting (pid: 18610)
+[2018-12-23 09:41:54 +0800] [18611] [INFO] Worker exiting (pid: 18611)
+[2018-12-23 09:41:54 +0800] [18613] [INFO] Worker exiting (pid: 18613)
+[2018-12-23 09:41:54 +0800] [18607] [INFO] Shutting down: Master
+[2018-12-23 09:41:56 +0800] [18731] [INFO] Starting gunicorn 19.9.0
+[2018-12-23 09:41:56 +0800] [18731] [INFO] Listening at: http://0.0.0.0:81 (18731)
+[2018-12-23 09:41:56 +0800] [18731] [INFO] Using worker: sync
+[2018-12-23 09:41:56 +0800] [18734] [INFO] Booting worker with pid: 18734
+[2018-12-23 09:41:56 +0800] [18736] [INFO] Booting worker with pid: 18736
+[2018-12-23 09:41:56 +0800] [18737] [INFO] Booting worker with pid: 18737
+[2018-12-24 00:53:25 +0800] [18731] [CRITICAL] WORKER TIMEOUT (pid:18734)
+[2018-12-24 00:53:25 +0800] [18734] [INFO] Worker exiting (pid: 18734)
+[2018-12-24 00:53:25 +0800] [23572] [INFO] Booting worker with pid: 23572
+[2018-12-24 11:09:02 +0800] [18731] [INFO] Handling signal: term
+[2018-12-24 11:09:02 +0800] [18736] [INFO] Worker exiting (pid: 18736)
+[2018-12-24 11:09:02 +0800] [18737] [INFO] Worker exiting (pid: 18737)
+[2018-12-24 11:09:02 +0800] [23572] [INFO] Worker exiting (pid: 23572)
+[2018-12-24 11:09:02 +0800] [18731] [INFO] Shutting down: Master
+[2018-12-24 11:09:03 +0800] [27008] [INFO] Starting gunicorn 19.9.0
+[2018-12-24 11:09:03 +0800] [27008] [INFO] Listening at: http://0.0.0.0:81 (27008)
+[2018-12-24 11:09:03 +0800] [27008] [INFO] Using worker: sync
+[2018-12-24 11:09:03 +0800] [27011] [INFO] Booting worker with pid: 27011
+[2018-12-24 11:09:03 +0800] [27013] [INFO] Booting worker with pid: 27013
+[2018-12-24 11:09:04 +0800] [27014] [INFO] Booting worker with pid: 27014
+[2018-12-24 11:13:46 +0800] [27008] [INFO] Handling signal: term
+[2018-12-24 11:13:46 +0800] [27011] [INFO] Worker exiting (pid: 27011)
+[2018-12-24 11:13:46 +0800] [27013] [INFO] Worker exiting (pid: 27013)
+[2018-12-24 11:13:46 +0800] [27014] [INFO] Worker exiting (pid: 27014)
+[2018-12-24 11:13:46 +0800] [27008] [INFO] Shutting down: Master
+[2018-12-24 11:13:47 +0800] [27134] [INFO] Starting gunicorn 19.9.0
+[2018-12-24 11:13:47 +0800] [27134] [INFO] Listening at: http://0.0.0.0:81 (27134)
+[2018-12-24 11:13:47 +0800] [27134] [INFO] Using worker: sync
+[2018-12-24 11:13:47 +0800] [27137] [INFO] Booting worker with pid: 27137
+[2018-12-24 11:13:47 +0800] [27138] [INFO] Booting worker with pid: 27138
+[2018-12-24 11:13:48 +0800] [27139] [INFO] Booting worker with pid: 27139
+[2018-12-29 11:00:27 +0800] [627] [INFO] Starting gunicorn 19.9.0
+[2018-12-29 11:00:27 +0800] [627] [INFO] Listening at: http://0.0.0.0:81 (627)
+[2018-12-29 11:00:27 +0800] [627] [INFO] Using worker: sync
+[2018-12-29 11:00:27 +0800] [630] [INFO] Booting worker with pid: 630
+[2018-12-29 11:00:27 +0800] [631] [INFO] Booting worker with pid: 631
+[2018-12-29 11:00:27 +0800] [632] [INFO] Booting worker with pid: 632
+[2018-12-31 18:53:49 +0800] [627] [INFO] Handling signal: term
+[2018-12-31 18:53:49 +0800] [632] [INFO] Worker exiting (pid: 632)
+[2018-12-31 18:53:49 +0800] [630] [INFO] Worker exiting (pid: 630)
+[2018-12-31 18:53:49 +0800] [631] [INFO] Worker exiting (pid: 631)
+[2018-12-31 18:53:49 +0800] [627] [INFO] Shutting down: Master
+[2018-12-31 18:53:50 +0800] [18458] [INFO] Starting gunicorn 19.9.0
+[2018-12-31 18:53:50 +0800] [18458] [INFO] Listening at: http://0.0.0.0:81 (18458)
+[2018-12-31 18:53:50 +0800] [18458] [INFO] Using worker: sync
+[2018-12-31 18:53:50 +0800] [18461] [INFO] Booting worker with pid: 18461
+[2018-12-31 18:53:50 +0800] [18462] [INFO] Booting worker with pid: 18462
+[2018-12-31 18:53:51 +0800] [18463] [INFO] Booting worker with pid: 18463
+[2018-12-31 18:54:50 +0800] [18458] [INFO] Handling signal: term
+[2018-12-31 18:54:50 +0800] [18462] [INFO] Worker exiting (pid: 18462)
+[2018-12-31 18:54:50 +0800] [18463] [INFO] Worker exiting (pid: 18463)
+[2018-12-31 18:54:50 +0800] [18461] [INFO] Worker exiting (pid: 18461)
+[2018-12-31 18:54:51 +0800] [18458] [INFO] Shutting down: Master
+[2018-12-31 18:54:52 +0800] [18472] [INFO] Starting gunicorn 19.9.0
+[2018-12-31 18:54:52 +0800] [18472] [INFO] Listening at: http://0.0.0.0:81 (18472)
+[2018-12-31 18:54:52 +0800] [18472] [INFO] Using worker: sync
+[2018-12-31 18:54:52 +0800] [18475] [INFO] Booting worker with pid: 18475
+[2018-12-31 18:54:52 +0800] [18477] [INFO] Booting worker with pid: 18477
+[2018-12-31 18:54:52 +0800] [18476] [INFO] Booting worker with pid: 18476
+[2018-12-31 19:22:28 +0800] [19033] [INFO] Starting gunicorn 19.9.0
+[2018-12-31 19:22:28 +0800] [19033] [INFO] Listening at: http://0.0.0.0:81 (19033)
+[2018-12-31 19:22:28 +0800] [19033] [INFO] Using worker: sync
+[2018-12-31 19:22:28 +0800] [19036] [INFO] Booting worker with pid: 19036
+[2018-12-31 19:22:28 +0800] [19038] [INFO] Booting worker with pid: 19038
+[2018-12-31 19:22:28 +0800] [19039] [INFO] Booting worker with pid: 19039
+[2018-12-31 22:28:29 +0800] [19033] [INFO] Handling signal: term
+[2018-12-31 22:28:29 +0800] [19036] [INFO] Worker exiting (pid: 19036)
+[2018-12-31 22:28:29 +0800] [19038] [INFO] Worker exiting (pid: 19038)
+[2018-12-31 22:28:29 +0800] [19039] [INFO] Worker exiting (pid: 19039)
+[2018-12-31 22:28:29 +0800] [19033] [INFO] Shutting down: Master
+[2018-12-31 22:28:30 +0800] [20098] [INFO] Starting gunicorn 19.9.0
+[2018-12-31 22:28:30 +0800] [20098] [INFO] Listening at: http://0.0.0.0:81 (20098)
+[2018-12-31 22:28:30 +0800] [20098] [INFO] Using worker: sync
+[2018-12-31 22:28:30 +0800] [20101] [INFO] Booting worker with pid: 20101
+[2018-12-31 22:28:30 +0800] [20102] [INFO] Booting worker with pid: 20102
+[2018-12-31 22:28:30 +0800] [20103] [INFO] Booting worker with pid: 20103
+[2019-01-01 17:23:51 +0800] [20098] [INFO] Handling signal: term
+[2019-01-01 17:23:51 +0800] [20101] [INFO] Worker exiting (pid: 20101)
+[2019-01-01 17:23:51 +0800] [20102] [INFO] Worker exiting (pid: 20102)
+[2019-01-01 17:23:51 +0800] [20103] [INFO] Worker exiting (pid: 20103)
+[2019-01-01 17:23:51 +0800] [20098] [INFO] Shutting down: Master
+[2019-01-01 17:23:52 +0800] [26190] [INFO] Starting gunicorn 19.9.0
+[2019-01-01 17:23:52 +0800] [26190] [INFO] Listening at: http://0.0.0.0:81 (26190)
+[2019-01-01 17:23:52 +0800] [26190] [INFO] Using worker: sync
+[2019-01-01 17:23:52 +0800] [26193] [INFO] Booting worker with pid: 26193
+[2019-01-01 17:23:52 +0800] [26194] [INFO] Booting worker with pid: 26194
+[2019-01-01 17:23:53 +0800] [26195] [INFO] Booting worker with pid: 26195
+[2019-01-01 18:21:11 +0800] [26190] [INFO] Handling signal: term
+[2019-01-01 18:21:11 +0800] [26195] [INFO] Worker exiting (pid: 26195)
+[2019-01-01 18:21:11 +0800] [26194] [INFO] Worker exiting (pid: 26194)
+[2019-01-01 18:21:11 +0800] [26193] [INFO] Worker exiting (pid: 26193)
+[2019-01-01 18:21:11 +0800] [26190] [INFO] Shutting down: Master
+[2019-01-01 18:21:12 +0800] [26491] [INFO] Starting gunicorn 19.9.0
+[2019-01-01 18:21:12 +0800] [26491] [INFO] Listening at: http://0.0.0.0:81 (26491)
+[2019-01-01 18:21:12 +0800] [26491] [INFO] Using worker: sync
+[2019-01-01 18:21:12 +0800] [26494] [INFO] Booting worker with pid: 26494
+[2019-01-01 18:21:12 +0800] [26495] [INFO] Booting worker with pid: 26495
+[2019-01-01 18:21:12 +0800] [26496] [INFO] Booting worker with pid: 26496
+[2019-01-01 22:08:13 +0800] [26491] [INFO] Handling signal: term
+[2019-01-01 22:08:13 +0800] [26496] [INFO] Worker exiting (pid: 26496)
+[2019-01-01 22:08:13 +0800] [26494] [INFO] Worker exiting (pid: 26494)
+[2019-01-01 22:08:13 +0800] [26495] [INFO] Worker exiting (pid: 26495)
+[2019-01-01 22:08:14 +0800] [26491] [INFO] Shutting down: Master
+[2019-01-01 22:08:15 +0800] [27716] [INFO] Starting gunicorn 19.9.0
+[2019-01-01 22:08:15 +0800] [27716] [INFO] Listening at: http://0.0.0.0:81 (27716)
+[2019-01-01 22:08:15 +0800] [27716] [INFO] Using worker: sync
+[2019-01-01 22:08:15 +0800] [27719] [INFO] Booting worker with pid: 27719
+[2019-01-01 22:08:15 +0800] [27720] [INFO] Booting worker with pid: 27720
+[2019-01-01 22:08:15 +0800] [27721] [INFO] Booting worker with pid: 27721
+[2019-01-01 22:14:22 +0800] [27716] [INFO] Handling signal: term
+[2019-01-01 22:14:22 +0800] [27720] [INFO] Worker exiting (pid: 27720)
+[2019-01-01 22:14:22 +0800] [27721] [INFO] Worker exiting (pid: 27721)
+[2019-01-01 22:14:22 +0800] [27719] [INFO] Worker exiting (pid: 27719)
+[2019-01-01 22:14:22 +0800] [27716] [INFO] Shutting down: Master
+[2019-01-01 22:14:23 +0800] [27763] [INFO] Starting gunicorn 19.9.0
+[2019-01-01 22:14:23 +0800] [27763] [INFO] Listening at: http://0.0.0.0:81 (27763)
+[2019-01-01 22:14:23 +0800] [27763] [INFO] Using worker: sync
+[2019-01-01 22:14:23 +0800] [27766] [INFO] Booting worker with pid: 27766
+[2019-01-01 22:14:24 +0800] [27767] [INFO] Booting worker with pid: 27767
+[2019-01-01 22:14:24 +0800] [27768] [INFO] Booting worker with pid: 27768
+[2019-01-01 22:16:48 +0800] [27763] [INFO] Handling signal: term
+[2019-01-01 22:16:48 +0800] [27768] [INFO] Worker exiting (pid: 27768)
+[2019-01-01 22:16:48 +0800] [27766] [INFO] Worker exiting (pid: 27766)
+[2019-01-01 22:16:48 +0800] [27767] [INFO] Worker exiting (pid: 27767)
+[2019-01-01 22:16:48 +0800] [27763] [INFO] Shutting down: Master
+[2019-01-01 22:16:49 +0800] [27811] [INFO] Starting gunicorn 19.9.0
+[2019-01-01 22:16:49 +0800] [27811] [INFO] Listening at: http://0.0.0.0:81 (27811)
+[2019-01-01 22:16:49 +0800] [27811] [INFO] Using worker: sync
+[2019-01-01 22:16:49 +0800] [27814] [INFO] Booting worker with pid: 27814
+[2019-01-01 22:16:49 +0800] [27815] [INFO] Booting worker with pid: 27815
+[2019-01-01 22:16:49 +0800] [27817] [INFO] Booting worker with pid: 27817
+[2019-01-03 22:19:37 +0800] [27811] [CRITICAL] WORKER TIMEOUT (pid:27815)
+[2019-01-03 22:19:37 +0800] [27815] [INFO] Worker exiting (pid: 27815)
+[2019-01-03 22:19:37 +0800] [11093] [INFO] Booting worker with pid: 11093
+[2019-01-04 22:34:05 +0800] [27811] [INFO] Handling signal: term
+[2019-01-04 22:34:05 +0800] [11093] [INFO] Worker exiting (pid: 11093)
+[2019-01-04 22:34:05 +0800] [27814] [INFO] Worker exiting (pid: 27814)
+[2019-01-04 22:34:05 +0800] [27817] [INFO] Worker exiting (pid: 27817)
+[2019-01-04 22:34:06 +0800] [27811] [INFO] Shutting down: Master
+[2019-01-04 22:34:07 +0800] [18944] [INFO] Starting gunicorn 19.9.0
+[2019-01-04 22:34:07 +0800] [18944] [INFO] Listening at: http://0.0.0.0:81 (18944)
+[2019-01-04 22:34:07 +0800] [18944] [INFO] Using worker: sync
+[2019-01-04 22:34:07 +0800] [18947] [INFO] Booting worker with pid: 18947
+[2019-01-04 22:34:07 +0800] [18948] [INFO] Booting worker with pid: 18948
+[2019-01-04 22:34:07 +0800] [18950] [INFO] Booting worker with pid: 18950
+[2019-01-04 22:36:52 +0800] [18944] [INFO] Handling signal: term
+[2019-01-04 22:36:52 +0800] [18947] [INFO] Worker exiting (pid: 18947)
+[2019-01-04 22:36:52 +0800] [18948] [INFO] Worker exiting (pid: 18948)
+[2019-01-04 22:36:52 +0800] [18950] [INFO] Worker exiting (pid: 18950)
+[2019-01-04 22:36:53 +0800] [18944] [INFO] Shutting down: Master
+[2019-01-04 22:36:54 +0800] [18981] [INFO] Starting gunicorn 19.9.0
+[2019-01-04 22:36:54 +0800] [18981] [INFO] Listening at: http://0.0.0.0:81 (18981)
+[2019-01-04 22:36:54 +0800] [18981] [INFO] Using worker: sync
+[2019-01-04 22:36:54 +0800] [18984] [INFO] Booting worker with pid: 18984
+[2019-01-04 22:36:54 +0800] [18986] [INFO] Booting worker with pid: 18986
+[2019-01-04 22:36:54 +0800] [18987] [INFO] Booting worker with pid: 18987
+[2019-01-11 08:10:10 +0800] [18981] [CRITICAL] WORKER TIMEOUT (pid:18986)
+[2019-01-11 08:10:10 +0800] [18986] [INFO] Worker exiting (pid: 18986)
+[2019-01-11 08:10:10 +0800] [2323] [INFO] Booting worker with pid: 2323
+[2019-01-16 14:22:27 +0800] [18981] [INFO] Handling signal: term
+[2019-01-16 14:22:27 +0800] [18984] [INFO] Worker exiting (pid: 18984)
+[2019-01-16 14:22:27 +0800] [2323] [INFO] Worker exiting (pid: 2323)
+[2019-01-16 14:22:27 +0800] [18987] [INFO] Worker exiting (pid: 18987)
+[2019-01-16 14:22:27 +0800] [18981] [INFO] Shutting down: Master
+[2019-01-16 14:22:29 +0800] [9504] [INFO] Starting gunicorn 19.9.0
+[2019-01-16 14:22:29 +0800] [9504] [INFO] Listening at: http://0.0.0.0:81 (9504)
+[2019-01-16 14:22:29 +0800] [9504] [INFO] Using worker: sync
+[2019-01-16 14:22:29 +0800] [9507] [INFO] Booting worker with pid: 9507
+[2019-01-16 14:22:29 +0800] [9508] [INFO] Booting worker with pid: 9508
+[2019-01-16 14:22:29 +0800] [9510] [INFO] Booting worker with pid: 9510
+[2019-01-16 14:43:36 +0800] [9504] [INFO] Handling signal: term
+[2019-01-16 14:43:36 +0800] [9507] [INFO] Worker exiting (pid: 9507)
+[2019-01-16 14:43:36 +0800] [9508] [INFO] Worker exiting (pid: 9508)
+[2019-01-16 14:43:36 +0800] [9510] [INFO] Worker exiting (pid: 9510)
+[2019-01-16 14:43:37 +0800] [9504] [INFO] Shutting down: Master
+[2019-01-16 14:43:38 +0800] [9694] [INFO] Starting gunicorn 19.9.0
+[2019-01-16 14:43:38 +0800] [9694] [INFO] Listening at: http://0.0.0.0:81 (9694)
+[2019-01-16 14:43:38 +0800] [9694] [INFO] Using worker: sync
+[2019-01-16 14:43:38 +0800] [9697] [INFO] Booting worker with pid: 9697
+[2019-01-16 14:43:38 +0800] [9699] [INFO] Booting worker with pid: 9699
+[2019-01-16 14:43:38 +0800] [9700] [INFO] Booting worker with pid: 9700
+[2019-01-25 13:41:34 +0800] [9694] [CRITICAL] WORKER TIMEOUT (pid:9699)
+[2019-01-25 13:41:34 +0800] [9699] [INFO] Worker exiting (pid: 9699)
+[2019-01-25 13:41:34 +0800] [12172] [INFO] Booting worker with pid: 12172
+[2019-01-26 11:17:12 +0800] [9694] [INFO] Handling signal: term
+[2019-01-26 11:17:12 +0800] [9700] [INFO] Worker exiting (pid: 9700)
+[2019-01-26 11:17:12 +0800] [12172] [INFO] Worker exiting (pid: 12172)
+[2019-01-26 11:17:12 +0800] [9697] [INFO] Worker exiting (pid: 9697)
+[2019-01-26 11:17:13 +0800] [9694] [INFO] Shutting down: Master
+[2019-01-26 11:17:14 +0800] [19008] [INFO] Starting gunicorn 19.9.0
+[2019-01-26 11:17:14 +0800] [19008] [INFO] Listening at: http://0.0.0.0:81 (19008)
+[2019-01-26 11:17:14 +0800] [19008] [INFO] Using worker: sync
+[2019-01-26 11:17:14 +0800] [19011] [INFO] Booting worker with pid: 19011
+[2019-01-26 11:17:14 +0800] [19013] [INFO] Booting worker with pid: 19013
+[2019-01-26 11:17:14 +0800] [19014] [INFO] Booting worker with pid: 19014
+[2019-01-26 12:30:31 +0800] [19008] [INFO] Handling signal: term
+[2019-01-26 12:30:31 +0800] [19011] [INFO] Worker exiting (pid: 19011)
+[2019-01-26 12:30:31 +0800] [19014] [INFO] Worker exiting (pid: 19014)
+[2019-01-26 12:30:31 +0800] [19013] [INFO] Worker exiting (pid: 19013)
+[2019-01-26 12:30:31 +0800] [19008] [INFO] Shutting down: Master
+[2019-01-26 12:30:32 +0800] [19479] [INFO] Starting gunicorn 19.9.0
+[2019-01-26 12:30:32 +0800] [19479] [INFO] Listening at: http://0.0.0.0:81 (19479)
+[2019-01-26 12:30:32 +0800] [19479] [INFO] Using worker: sync
+[2019-01-26 12:30:32 +0800] [19482] [INFO] Booting worker with pid: 19482
+[2019-01-26 12:30:32 +0800] [19484] [INFO] Booting worker with pid: 19484
+[2019-01-26 12:30:32 +0800] [19485] [INFO] Booting worker with pid: 19485
+[2019-01-26 12:34:20 +0800] [19479] [INFO] Handling signal: term
+[2019-01-26 12:34:20 +0800] [19485] [INFO] Worker exiting (pid: 19485)
+[2019-01-26 12:34:20 +0800] [19484] [INFO] Worker exiting (pid: 19484)
+[2019-01-26 12:34:20 +0800] [19482] [INFO] Worker exiting (pid: 19482)
+[2019-01-26 12:34:20 +0800] [19479] [INFO] Shutting down: Master
+[2019-01-26 12:34:21 +0800] [19528] [INFO] Starting gunicorn 19.9.0
+[2019-01-26 12:34:21 +0800] [19528] [INFO] Listening at: http://0.0.0.0:81 (19528)
+[2019-01-26 12:34:21 +0800] [19528] [INFO] Using worker: sync
+[2019-01-26 12:34:21 +0800] [19531] [INFO] Booting worker with pid: 19531
+[2019-01-26 12:34:22 +0800] [19532] [INFO] Booting worker with pid: 19532
+[2019-01-26 12:34:22 +0800] [19533] [INFO] Booting worker with pid: 19533
+[2019-01-28 05:38:03 +0800] [19528] [CRITICAL] WORKER TIMEOUT (pid:19532)
+[2019-01-28 05:38:03 +0800] [19532] [INFO] Worker exiting (pid: 19532)
+[2019-01-28 05:38:03 +0800] [32439] [INFO] Booting worker with pid: 32439
+[2019-01-30 01:43:58 +0800] [19528] [CRITICAL] WORKER TIMEOUT (pid:32439)
+[2019-01-30 01:43:58 +0800] [32439] [INFO] Worker exiting (pid: 32439)
+[2019-01-30 01:43:58 +0800] [13860] [INFO] Booting worker with pid: 13860
+[2019-01-30 17:00:20 +0800] [19528] [INFO] Handling signal: term
+[2019-01-30 17:00:20 +0800] [19531] [INFO] Worker exiting (pid: 19531)
+[2019-01-30 17:00:20 +0800] [13860] [INFO] Worker exiting (pid: 13860)
+[2019-01-30 17:00:20 +0800] [19533] [INFO] Worker exiting (pid: 19533)
+[2019-01-30 17:00:20 +0800] [19528] [INFO] Shutting down: Master
+[2019-01-30 17:00:22 +0800] [18831] [INFO] Starting gunicorn 19.9.0
+[2019-01-30 17:00:22 +0800] [18831] [INFO] Listening at: http://0.0.0.0:81 (18831)
+[2019-01-30 17:00:22 +0800] [18831] [INFO] Using worker: sync
+[2019-01-30 17:00:22 +0800] [18834] [INFO] Booting worker with pid: 18834
+[2019-01-30 17:00:22 +0800] [18835] [INFO] Booting worker with pid: 18835
+[2019-01-30 17:00:22 +0800] [18837] [INFO] Booting worker with pid: 18837
+[2019-02-08 23:12:49 +0800] [18831] [INFO] Handling signal: term
+[2019-02-08 23:12:49 +0800] [18834] [INFO] Worker exiting (pid: 18834)
+[2019-02-08 23:12:49 +0800] [18837] [INFO] Worker exiting (pid: 18837)
+[2019-02-08 23:12:49 +0800] [18835] [INFO] Worker exiting (pid: 18835)
+[2019-02-08 23:12:50 +0800] [18831] [INFO] Shutting down: Master
+[2019-02-08 23:12:52 +0800] [23505] [INFO] Starting gunicorn 19.9.0
+[2019-02-08 23:12:52 +0800] [23505] [INFO] Listening at: http://0.0.0.0:81 (23505)
+[2019-02-08 23:12:52 +0800] [23505] [INFO] Using worker: sync
+[2019-02-08 23:12:52 +0800] [23508] [INFO] Booting worker with pid: 23508
+[2019-02-08 23:12:52 +0800] [23509] [INFO] Booting worker with pid: 23509
+[2019-02-08 23:12:52 +0800] [23510] [INFO] Booting worker with pid: 23510
+[2019-02-08 23:13:46 +0800] [23505] [INFO] Handling signal: term
+[2019-02-08 23:13:46 +0800] [23509] [INFO] Worker exiting (pid: 23509)
+[2019-02-08 23:13:46 +0800] [23508] [INFO] Worker exiting (pid: 23508)
+[2019-02-08 23:13:46 +0800] [23510] [INFO] Worker exiting (pid: 23510)
+[2019-02-08 23:13:47 +0800] [23505] [INFO] Shutting down: Master
+[2019-02-08 23:13:49 +0800] [23521] [INFO] Starting gunicorn 19.9.0
+[2019-02-08 23:13:49 +0800] [23521] [INFO] Listening at: http://0.0.0.0:81 (23521)
+[2019-02-08 23:13:49 +0800] [23521] [INFO] Using worker: sync
+[2019-02-08 23:13:49 +0800] [23524] [INFO] Booting worker with pid: 23524
+[2019-02-08 23:13:49 +0800] [23525] [INFO] Booting worker with pid: 23525
+[2019-02-08 23:13:49 +0800] [23526] [INFO] Booting worker with pid: 23526
+[2019-02-08 23:24:08 +0800] [23521] [INFO] Handling signal: term
+[2019-02-08 23:24:08 +0800] [23524] [INFO] Worker exiting (pid: 23524)
+[2019-02-08 23:24:08 +0800] [23525] [INFO] Worker exiting (pid: 23525)
+[2019-02-08 23:24:08 +0800] [23526] [INFO] Worker exiting (pid: 23526)
+[2019-02-08 23:24:09 +0800] [23521] [INFO] Shutting down: Master
+[2019-02-08 23:24:11 +0800] [23625] [INFO] Starting gunicorn 19.9.0
+[2019-02-08 23:24:11 +0800] [23625] [INFO] Listening at: http://0.0.0.0:81 (23625)
+[2019-02-08 23:24:11 +0800] [23625] [INFO] Using worker: sync
+[2019-02-08 23:24:11 +0800] [23628] [INFO] Booting worker with pid: 23628
+[2019-02-08 23:24:11 +0800] [23630] [INFO] Booting worker with pid: 23630
+[2019-02-08 23:24:11 +0800] [23629] [INFO] Booting worker with pid: 23629
+[2019-02-08 23:30:15 +0800] [23625] [INFO] Handling signal: term
+[2019-02-08 23:30:15 +0800] [23628] [INFO] Worker exiting (pid: 23628)
+[2019-02-08 23:30:15 +0800] [23629] [INFO] Worker exiting (pid: 23629)
+[2019-02-08 23:30:15 +0800] [23630] [INFO] Worker exiting (pid: 23630)
+[2019-02-08 23:30:16 +0800] [23625] [INFO] Shutting down: Master
+[2019-02-08 23:30:17 +0800] [23684] [INFO] Starting gunicorn 19.9.0
+[2019-02-08 23:30:17 +0800] [23684] [INFO] Listening at: http://0.0.0.0:81 (23684)
+[2019-02-08 23:30:17 +0800] [23684] [INFO] Using worker: sync
+[2019-02-08 23:30:17 +0800] [23687] [INFO] Booting worker with pid: 23687
+[2019-02-08 23:30:17 +0800] [23688] [INFO] Booting worker with pid: 23688
+[2019-02-08 23:30:17 +0800] [23689] [INFO] Booting worker with pid: 23689
+[2019-02-11 22:02:21 +0800] [23684] [INFO] Handling signal: term
+[2019-02-11 22:02:21 +0800] [23688] [INFO] Worker exiting (pid: 23688)
+[2019-02-11 22:02:21 +0800] [23689] [INFO] Worker exiting (pid: 23689)
+[2019-02-11 22:02:21 +0800] [23687] [INFO] Worker exiting (pid: 23687)
+[2019-02-11 22:02:22 +0800] [23684] [INFO] Shutting down: Master
+[2019-02-11 22:02:23 +0800] [13385] [INFO] Starting gunicorn 19.9.0
+[2019-02-11 22:02:23 +0800] [13385] [INFO] Listening at: http://0.0.0.0:81 (13385)
+[2019-02-11 22:02:23 +0800] [13385] [INFO] Using worker: sync
+[2019-02-11 22:02:23 +0800] [13388] [INFO] Booting worker with pid: 13388
+[2019-02-11 22:02:23 +0800] [13389] [INFO] Booting worker with pid: 13389
+[2019-02-11 22:02:23 +0800] [13390] [INFO] Booting worker with pid: 13390
+[2019-02-14 04:31:28 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:13388)
+[2019-02-14 04:31:28 +0800] [13388] [INFO] Worker exiting (pid: 13388)
+[2019-02-14 04:31:28 +0800] [30394] [INFO] Booting worker with pid: 30394
+[2019-02-15 08:55:43 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:30394)
+[2019-02-15 08:55:43 +0800] [30394] [INFO] Worker exiting (pid: 30394)
+[2019-02-15 08:55:43 +0800] [6961] [INFO] Booting worker with pid: 6961
+[2019-02-17 02:55:31 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:13389)
+[2019-02-17 02:55:31 +0800] [13389] [INFO] Worker exiting (pid: 13389)
+[2019-02-17 02:55:31 +0800] [19985] [INFO] Booting worker with pid: 19985
+[2019-02-25 15:00:23 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:19985)
+[2019-02-25 15:00:23 +0800] [19985] [INFO] Worker exiting (pid: 19985)
+[2019-02-25 15:00:23 +0800] [21462] [INFO] Booting worker with pid: 21462
+[2019-03-24 08:11:25 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:6961)
+[2019-03-24 08:11:25 +0800] [6961] [INFO] Worker exiting (pid: 6961)
+[2019-03-24 08:11:25 +0800] [28491] [INFO] Booting worker with pid: 28491
+[2019-03-28 22:37:17 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:28491)
+[2019-03-28 22:37:17 +0800] [28491] [INFO] Worker exiting (pid: 28491)
+[2019-03-28 22:37:18 +0800] [30523] [INFO] Booting worker with pid: 30523
+[2019-03-31 23:15:50 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:21462)
+[2019-03-31 23:15:50 +0800] [21462] [INFO] Worker exiting (pid: 21462)
+[2019-03-31 23:15:50 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:30523)
+[2019-03-31 23:15:50 +0800] [30523] [INFO] Worker exiting (pid: 30523)
+[2019-03-31 23:15:50 +0800] [20802] [INFO] Booting worker with pid: 20802
+[2019-03-31 23:15:50 +0800] [20803] [INFO] Booting worker with pid: 20803
+[2019-04-19 23:40:00 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:20802)
+[2019-04-19 23:40:00 +0800] [20802] [INFO] Worker exiting (pid: 20802)
+[2019-04-19 23:40:00 +0800] [2299] [INFO] Booting worker with pid: 2299
+[2019-04-19 23:40:01 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:20803)
+[2019-04-19 23:40:01 +0800] [20803] [INFO] Worker exiting (pid: 20803)
+[2019-04-19 23:40:02 +0800] [2301] [INFO] Booting worker with pid: 2301
+[2019-04-19 23:40:19 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:13390)
+[2019-04-19 23:40:19 +0800] [13390] [INFO] Worker exiting (pid: 13390)
+[2019-04-19 23:40:19 +0800] [2305] [INFO] Booting worker with pid: 2305
+[2019-04-19 23:40:31 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:2299)
+[2019-04-19 23:40:31 +0800] [2299] [INFO] Worker exiting (pid: 2299)
+[2019-04-19 23:40:31 +0800] [2309] [INFO] Booting worker with pid: 2309
+[2019-04-19 23:40:32 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:2301)
+[2019-04-19 23:40:32 +0800] [2301] [INFO] Worker exiting (pid: 2301)
+[2019-04-19 23:40:33 +0800] [2311] [INFO] Booting worker with pid: 2311
+[2019-04-19 23:40:51 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:2305)
+[2019-04-19 23:40:51 +0800] [2305] [INFO] Worker exiting (pid: 2305)
+[2019-04-19 23:40:51 +0800] [2315] [INFO] Booting worker with pid: 2315
+[2019-04-19 23:41:02 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:2309)
+[2019-04-19 23:41:02 +0800] [2309] [INFO] Worker exiting (pid: 2309)
+[2019-04-19 23:41:02 +0800] [2317] [INFO] Booting worker with pid: 2317
+[2019-04-21 16:56:35 +0800] [13385] [CRITICAL] WORKER TIMEOUT (pid:2317)
+[2019-04-21 16:56:35 +0800] [2317] [INFO] Worker exiting (pid: 2317)
+[2019-04-21 16:56:35 +0800] [15423] [INFO] Booting worker with pid: 15423
+[2019-04-23 21:09:57 +0800] [13385] [INFO] Handling signal: hup
+[2019-04-23 21:09:57 +0800] [13385] [INFO] Hang up: Master
+[2019-04-23 21:09:57 +0800] [13385] [INFO] Handling signal: term
+[2019-04-23 21:09:57 +0800] [32330] [INFO] Booting worker with pid: 32330
+[2019-04-23 21:09:57 +0800] [32329] [INFO] Booting worker with pid: 32329
+[2019-04-23 21:09:57 +0800] [32345] [INFO] Booting worker with pid: 32345
+[2019-04-23 21:10:13 +0800] [32330] [INFO] Parent changed, shutting down: <Worker 32330>
+[2019-04-23 21:10:13 +0800] [32330] [INFO] Worker exiting (pid: 32330)
+[2019-04-23 21:10:13 +0800] [32345] [INFO] Parent changed, shutting down: <Worker 32345>
+[2019-04-23 21:10:13 +0800] [32345] [INFO] Worker exiting (pid: 32345)
+[2019-04-23 21:10:13 +0800] [32329] [INFO] Parent changed, shutting down: <Worker 32329>
+[2019-04-23 21:10:13 +0800] [32329] [INFO] Worker exiting (pid: 32329)
+[2019-04-23 21:37:40 +0800] [1613] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:37:40 +0800] [1613] [INFO] Listening at: http://0.0.0.0:81 (1613)
+[2019-04-23 21:37:40 +0800] [1613] [INFO] Using worker: sync
+[2019-04-23 21:37:40 +0800] [1617] [INFO] Booting worker with pid: 1617
+[2019-04-23 21:37:40 +0800] [1618] [INFO] Booting worker with pid: 1618
+[2019-04-23 21:37:40 +0800] [1619] [INFO] Booting worker with pid: 1619
+[2019-04-23 21:37:57 +0800] [1613] [INFO] Handling signal: term
+[2019-04-23 21:37:57 +0800] [1618] [INFO] Worker exiting (pid: 1618)
+[2019-04-23 21:37:57 +0800] [1619] [INFO] Worker exiting (pid: 1619)
+[2019-04-23 21:37:57 +0800] [1617] [INFO] Worker exiting (pid: 1617)
+[2019-04-23 21:37:57 +0800] [1613] [INFO] Shutting down: Master
+[2019-04-23 21:37:58 +0800] [1624] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:37:58 +0800] [1624] [INFO] Listening at: http://0.0.0.0:81 (1624)
+[2019-04-23 21:37:58 +0800] [1624] [INFO] Using worker: sync
+[2019-04-23 21:37:58 +0800] [1627] [INFO] Booting worker with pid: 1627
+[2019-04-23 21:37:58 +0800] [1628] [INFO] Booting worker with pid: 1628
+[2019-04-23 21:37:59 +0800] [1630] [INFO] Booting worker with pid: 1630
+[2019-04-23 21:43:56 +0800] [1832] [INFO] Booting worker with pid: 1832
+[2019-04-23 21:44:50 +0800] [1935] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:44:50 +0800] [1935] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:50 +0800] [1935] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:51 +0800] [1935] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:51 +0800] [1935] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:52 +0800] [1935] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:52 +0800] [1935] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:53 +0800] [1935] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:53 +0800] [1935] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:54 +0800] [1935] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:54 +0800] [1935] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:55 +0800] [1935] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2019-04-23 21:44:56 +0800] [1957] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:44:56 +0800] [1957] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:56 +0800] [1957] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:56 +0800] [1832] [INFO] Parent changed, shutting down: <Worker 1832>
+[2019-04-23 21:44:56 +0800] [1832] [INFO] Worker exiting (pid: 1832)
+[2019-04-23 21:44:57 +0800] [1957] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:57 +0800] [1957] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:58 +0800] [1957] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:58 +0800] [1957] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:59 +0800] [1957] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:44:59 +0800] [1957] [ERROR] Retrying in 1 second.
+[2019-04-23 21:44:59 +0800] [1627] [INFO] Parent changed, shutting down: <Worker 1627>
+[2019-04-23 21:44:59 +0800] [1627] [INFO] Worker exiting (pid: 1627)
+[2019-04-23 21:45:00 +0800] [1630] [INFO] Parent changed, shutting down: <Worker 1630>
+[2019-04-23 21:45:00 +0800] [1630] [INFO] Worker exiting (pid: 1630)
+[2019-04-23 21:45:00 +0800] [1957] [INFO] Listening at: http://0.0.0.0:81 (1957)
+[2019-04-23 21:45:00 +0800] [1957] [INFO] Using worker: sync
+[2019-04-23 21:45:00 +0800] [1960] [INFO] Booting worker with pid: 1960
+[2019-04-23 21:45:00 +0800] [1962] [INFO] Booting worker with pid: 1962
+[2019-04-23 21:45:00 +0800] [1963] [INFO] Booting worker with pid: 1963
+[2019-04-23 21:53:19 +0000] [2150] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:53:19 +0000] [2150] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:53:19 +0000] [2150] [ERROR] Retrying in 1 second.
+[2019-04-23 21:53:20 +0000] [2150] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:53:20 +0000] [2150] [ERROR] Retrying in 1 second.
+[2019-04-23 21:53:21 +0000] [2150] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:53:21 +0000] [2150] [ERROR] Retrying in 1 second.
+[2019-04-23 21:53:22 +0000] [2150] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:53:22 +0000] [2150] [ERROR] Retrying in 1 second.
+[2019-04-23 21:53:23 +0000] [2150] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:53:23 +0000] [2150] [ERROR] Retrying in 1 second.
+[2019-04-23 21:53:24 +0000] [2150] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2019-04-23 21:53:39 +0800] [1957] [INFO] Handling signal: term
+[2019-04-23 21:53:39 +0800] [1960] [INFO] Worker exiting (pid: 1960)
+[2019-04-23 21:53:39 +0800] [1962] [INFO] Worker exiting (pid: 1962)
+[2019-04-23 21:53:39 +0800] [1963] [INFO] Worker exiting (pid: 1963)
+[2019-04-23 21:53:39 +0800] [1957] [INFO] Shutting down: Master
+[2019-04-23 21:53:40 +0800] [2163] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:53:40 +0800] [2163] [INFO] Listening at: http://0.0.0.0:81 (2163)
+[2019-04-23 21:53:40 +0800] [2163] [INFO] Using worker: sync
+[2019-04-23 21:53:40 +0800] [2166] [INFO] Booting worker with pid: 2166
+[2019-04-23 21:53:40 +0800] [2168] [INFO] Booting worker with pid: 2168
+[2019-04-23 21:53:40 +0800] [2169] [INFO] Booting worker with pid: 2169
+[2019-04-23 21:54:17 +0000] [2186] [INFO] Starting gunicorn 19.9.0
+[2019-04-23 21:54:17 +0000] [2186] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:54:17 +0000] [2186] [ERROR] Retrying in 1 second.
+[2019-04-23 21:54:18 +0000] [2186] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:54:18 +0000] [2186] [ERROR] Retrying in 1 second.
+[2019-04-23 21:54:19 +0000] [2186] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:54:19 +0000] [2186] [ERROR] Retrying in 1 second.
+[2019-04-23 21:54:20 +0000] [2186] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:54:20 +0000] [2186] [ERROR] Retrying in 1 second.
+[2019-04-23 21:54:21 +0000] [2186] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-04-23 21:54:21 +0000] [2186] [ERROR] Retrying in 1 second.
+[2019-04-23 21:54:22 +0000] [2186] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2019-04-27 16:44:25 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:2169)
+[2019-04-27 16:44:25 +0800] [2169] [INFO] Worker exiting (pid: 2169)
+[2019-04-27 16:44:25 +0800] [32591] [INFO] Booting worker with pid: 32591
+[2019-05-02 18:43:01 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:2166)
+[2019-05-02 18:43:01 +0800] [2166] [INFO] Worker exiting (pid: 2166)
+[2019-05-02 18:43:01 +0800] [6365] [INFO] Booting worker with pid: 6365
+[2019-05-06 01:24:06 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:2168)
+[2019-05-06 01:24:06 +0800] [2168] [INFO] Worker exiting (pid: 2168)
+[2019-05-06 01:24:06 +0800] [31123] [INFO] Booting worker with pid: 31123
+[2019-05-09 20:03:13 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:31123)
+[2019-05-09 20:03:13 +0800] [31123] [INFO] Worker exiting (pid: 31123)
+[2019-05-09 20:03:13 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:6365)
+[2019-05-09 20:03:13 +0800] [6365] [INFO] Worker exiting (pid: 6365)
+[2019-05-09 20:03:14 +0800] [27390] [INFO] Booting worker with pid: 27390
+[2019-05-09 20:03:14 +0800] [27392] [INFO] Booting worker with pid: 27392
+[2019-05-12 17:03:09 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:27390)
+[2019-05-12 17:03:09 +0800] [27390] [INFO] Worker exiting (pid: 27390)
+[2019-05-12 17:03:09 +0800] [16827] [INFO] Booting worker with pid: 16827
+[2019-05-20 09:04:04 +0800] [2163] [CRITICAL] WORKER TIMEOUT (pid:16827)
+[2019-05-20 09:04:04 +0800] [16827] [INFO] Worker exiting (pid: 16827)
+[2019-05-20 09:04:04 +0800] [10249] [INFO] Booting worker with pid: 10249
+[2019-05-21 17:14:45 +0800] [2163] [INFO] Handling signal: term
+[2019-05-21 17:14:45 +0800] [27392] [INFO] Worker exiting (pid: 27392)
+[2019-05-21 17:14:45 +0800] [32591] [INFO] Worker exiting (pid: 32591)
+[2019-05-21 17:14:45 +0800] [10249] [INFO] Worker exiting (pid: 10249)
+[2019-05-21 17:14:46 +0800] [2163] [INFO] Shutting down: Master
+[2019-05-21 17:14:47 +0800] [21257] [INFO] Starting gunicorn 19.9.0
+[2019-05-21 17:14:47 +0800] [21257] [INFO] Listening at: http://0.0.0.0:81 (21257)
+[2019-05-21 17:14:47 +0800] [21257] [INFO] Using worker: sync
+[2019-05-21 17:14:47 +0800] [21260] [INFO] Booting worker with pid: 21260
+[2019-05-21 17:14:47 +0800] [21261] [INFO] Booting worker with pid: 21261
+[2019-05-21 17:14:47 +0800] [21262] [INFO] Booting worker with pid: 21262
+[2019-05-30 20:29:00 +0800] [21261] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = six.next(parser)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/http/message.py", line 181, in __init__
+    super(Request, self).__init__(cfg, unreader)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/http/message.py", line 54, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/http/message.py", line 230, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/root/django1.10.6/lib/python3.5/site-packages/gunicorn/http/message.py", line 74, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2019-06-04 22:02:44 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:21261)
+[2019-06-04 22:02:44 +0800] [21261] [INFO] Worker exiting (pid: 21261)
+[2019-06-04 22:02:44 +0800] [31567] [INFO] Booting worker with pid: 31567
+[2019-06-04 22:03:40 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31567)
+[2019-06-04 22:03:40 +0800] [31567] [INFO] Worker exiting (pid: 31567)
+[2019-06-04 22:03:40 +0800] [31573] [INFO] Booting worker with pid: 31573
+[2019-06-04 22:04:05 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:21262)
+[2019-06-04 22:04:05 +0800] [21262] [INFO] Worker exiting (pid: 21262)
+[2019-06-04 22:04:06 +0800] [31577] [INFO] Booting worker with pid: 31577
+[2019-06-04 22:04:27 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:21260)
+[2019-06-04 22:04:27 +0800] [21260] [INFO] Worker exiting (pid: 21260)
+[2019-06-04 22:04:27 +0800] [31584] [INFO] Booting worker with pid: 31584
+[2019-06-04 22:05:42 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31573)
+[2019-06-04 22:05:42 +0800] [31573] [INFO] Worker exiting (pid: 31573)
+[2019-06-04 22:05:42 +0800] [31596] [INFO] Booting worker with pid: 31596
+[2019-06-04 22:05:54 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31577)
+[2019-06-04 22:05:54 +0800] [31577] [INFO] Worker exiting (pid: 31577)
+[2019-06-04 22:05:54 +0800] [31599] [INFO] Booting worker with pid: 31599
+[2019-06-04 22:06:30 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31596)
+[2019-06-04 22:06:30 +0800] [31596] [INFO] Worker exiting (pid: 31596)
+[2019-06-04 22:06:30 +0800] [31603] [INFO] Booting worker with pid: 31603
+[2019-06-04 22:08:03 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31584)
+[2019-06-04 22:08:03 +0800] [31584] [INFO] Worker exiting (pid: 31584)
+[2019-06-04 22:08:03 +0800] [31611] [INFO] Booting worker with pid: 31611
+[2019-06-04 22:09:28 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31599)
+[2019-06-04 22:09:28 +0800] [31599] [INFO] Worker exiting (pid: 31599)
+[2019-06-04 22:09:28 +0800] [31621] [INFO] Booting worker with pid: 31621
+[2019-06-04 22:09:42 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31611)
+[2019-06-04 22:09:42 +0800] [31611] [INFO] Worker exiting (pid: 31611)
+[2019-06-04 22:09:42 +0800] [31624] [INFO] Booting worker with pid: 31624
+[2019-06-04 22:10:18 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31621)
+[2019-06-04 22:10:18 +0800] [31621] [INFO] Worker exiting (pid: 31621)
+[2019-06-04 22:10:18 +0800] [31628] [INFO] Booting worker with pid: 31628
+[2019-06-04 22:10:50 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31603)
+[2019-06-04 22:10:50 +0800] [31603] [INFO] Worker exiting (pid: 31603)
+[2019-06-04 22:10:50 +0800] [31633] [INFO] Booting worker with pid: 31633
+[2019-06-04 22:11:29 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31628)
+[2019-06-04 22:11:29 +0800] [31628] [INFO] Worker exiting (pid: 31628)
+[2019-06-04 22:11:29 +0800] [31640] [INFO] Booting worker with pid: 31640
+[2019-06-04 22:11:40 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31624)
+[2019-06-04 22:11:40 +0800] [31624] [INFO] Worker exiting (pid: 31624)
+[2019-06-04 22:11:40 +0800] [31643] [INFO] Booting worker with pid: 31643
+[2019-06-04 22:12:22 +0800] [21257] [CRITICAL] WORKER TIMEOUT (pid:31633)
+[2019-06-04 22:12:22 +0800] [31633] [INFO] Worker exiting (pid: 31633)
+[2019-06-04 22:12:23 +0800] [31648] [INFO] Booting worker with pid: 31648
+[2019-06-07 17:05:18 +0800] [21257] [INFO] Handling signal: term
+[2019-06-07 17:05:18 +0800] [31648] [INFO] Worker exiting (pid: 31648)
+[2019-06-07 17:05:18 +0800] [31640] [INFO] Worker exiting (pid: 31640)
+[2019-06-07 17:05:18 +0800] [31643] [INFO] Worker exiting (pid: 31643)
+[2019-06-07 17:05:19 +0800] [21257] [INFO] Shutting down: Master
+[2019-06-07 17:05:20 +0800] [20723] [INFO] Starting gunicorn 19.9.0
+[2019-06-07 17:05:20 +0800] [20723] [INFO] Listening at: http://0.0.0.0:81 (20723)
+[2019-06-07 17:05:20 +0800] [20723] [INFO] Using worker: sync
+[2019-06-07 17:05:20 +0800] [20727] [INFO] Booting worker with pid: 20727
+[2019-06-07 17:05:20 +0800] [20728] [INFO] Booting worker with pid: 20728
+[2019-06-07 17:05:20 +0800] [20730] [INFO] Booting worker with pid: 20730
+[2019-06-07 17:05:34 +0800] [20723] [INFO] Handling signal: term
+[2019-06-07 17:05:34 +0800] [20727] [INFO] Worker exiting (pid: 20727)
+[2019-06-07 17:05:34 +0800] [20728] [INFO] Worker exiting (pid: 20728)
+[2019-06-07 17:05:34 +0800] [20730] [INFO] Worker exiting (pid: 20730)
+[2019-06-07 17:05:34 +0800] [20723] [INFO] Shutting down: Master
+[2019-06-07 17:05:35 +0800] [20735] [INFO] Starting gunicorn 19.9.0
+[2019-06-07 17:05:35 +0800] [20735] [INFO] Listening at: http://0.0.0.0:81 (20735)
+[2019-06-07 17:05:35 +0800] [20735] [INFO] Using worker: sync
+[2019-06-07 17:05:35 +0800] [20739] [INFO] Booting worker with pid: 20739
+[2019-06-07 17:05:35 +0800] [20740] [INFO] Booting worker with pid: 20740
+[2019-06-07 17:05:35 +0800] [20742] [INFO] Booting worker with pid: 20742
+[2019-06-07 17:21:01 +0800] [20735] [INFO] Handling signal: term
+[2019-06-07 17:21:01 +0800] [20740] [INFO] Worker exiting (pid: 20740)
+[2019-06-07 17:21:01 +0800] [20742] [INFO] Worker exiting (pid: 20742)
+[2019-06-07 17:21:01 +0800] [20739] [INFO] Worker exiting (pid: 20739)
+[2019-06-07 17:21:01 +0800] [20735] [INFO] Shutting down: Master
+[2019-06-07 17:21:02 +0800] [20875] [INFO] Starting gunicorn 19.9.0
+[2019-06-07 17:21:02 +0800] [20875] [INFO] Listening at: http://0.0.0.0:81 (20875)
+[2019-06-07 17:21:02 +0800] [20875] [INFO] Using worker: sync
+[2019-06-07 17:21:02 +0800] [20878] [INFO] Booting worker with pid: 20878
+[2019-06-07 17:21:02 +0800] [20880] [INFO] Booting worker with pid: 20880
+[2019-06-07 17:21:02 +0800] [20881] [INFO] Booting worker with pid: 20881
+[2019-06-07 17:26:41 +0800] [20875] [INFO] Handling signal: term
+[2019-06-07 17:26:41 +0800] [20880] [INFO] Worker exiting (pid: 20880)
+[2019-06-07 17:26:41 +0800] [20881] [INFO] Worker exiting (pid: 20881)
+[2019-06-07 17:26:41 +0800] [20878] [INFO] Worker exiting (pid: 20878)
+[2019-06-07 17:26:41 +0800] [20875] [INFO] Shutting down: Master
+[2019-06-07 17:26:42 +0800] [20981] [INFO] Starting gunicorn 19.9.0
+[2019-06-07 17:26:42 +0800] [20981] [INFO] Listening at: http://0.0.0.0:81 (20981)
+[2019-06-07 17:26:42 +0800] [20981] [INFO] Using worker: sync
+[2019-06-07 17:26:42 +0800] [20984] [INFO] Booting worker with pid: 20984
+[2019-06-07 17:26:42 +0800] [20986] [INFO] Booting worker with pid: 20986
+[2019-06-07 17:26:42 +0800] [20987] [INFO] Booting worker with pid: 20987
+[2019-06-07 17:28:44 +0800] [20981] [INFO] Handling signal: term
+[2019-06-07 17:28:44 +0800] [20984] [INFO] Worker exiting (pid: 20984)
+[2019-06-07 17:28:44 +0800] [20986] [INFO] Worker exiting (pid: 20986)
+[2019-06-07 17:28:44 +0800] [20987] [INFO] Worker exiting (pid: 20987)
+[2019-06-07 17:28:45 +0800] [20981] [INFO] Shutting down: Master
+[2019-06-07 17:28:46 +0800] [21007] [INFO] Starting gunicorn 19.9.0
+[2019-06-07 17:28:46 +0800] [21007] [INFO] Listening at: http://0.0.0.0:81 (21007)
+[2019-06-07 17:28:46 +0800] [21007] [INFO] Using worker: sync
+[2019-06-07 17:28:46 +0800] [21010] [INFO] Booting worker with pid: 21010
+[2019-06-07 17:28:46 +0800] [21012] [INFO] Booting worker with pid: 21012
+[2019-06-07 17:28:46 +0800] [21011] [INFO] Booting worker with pid: 21011
+[2019-06-17 06:35:11 +0800] [21007] [CRITICAL] WORKER TIMEOUT (pid:21010)
+[2019-06-17 06:35:11 +0800] [21010] [INFO] Worker exiting (pid: 21010)
+[2019-06-17 06:35:11 +0800] [30656] [INFO] Booting worker with pid: 30656
+[2019-06-18 20:54:05 +0800] [21007] [INFO] Handling signal: term
+[2019-06-18 20:54:05 +0800] [21012] [INFO] Worker exiting (pid: 21012)
+[2019-06-18 20:54:05 +0800] [30656] [INFO] Worker exiting (pid: 30656)
+[2019-06-18 20:54:05 +0800] [21011] [INFO] Worker exiting (pid: 21011)
+[2019-06-18 20:54:06 +0800] [21007] [INFO] Shutting down: Master
+[2019-06-18 20:54:07 +0800] [10461] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 20:54:07 +0800] [10461] [INFO] Listening at: http://0.0.0.0:81 (10461)
+[2019-06-18 20:54:07 +0800] [10461] [INFO] Using worker: sync
+[2019-06-18 20:54:07 +0800] [10464] [INFO] Booting worker with pid: 10464
+[2019-06-18 20:54:07 +0800] [10465] [INFO] Booting worker with pid: 10465
+[2019-06-18 20:54:07 +0800] [10466] [INFO] Booting worker with pid: 10466
+[2019-06-18 21:01:59 +0800] [10461] [INFO] Handling signal: term
+[2019-06-18 21:01:59 +0800] [10464] [INFO] Worker exiting (pid: 10464)
+[2019-06-18 21:01:59 +0800] [10466] [INFO] Worker exiting (pid: 10466)
+[2019-06-18 21:01:59 +0800] [10465] [INFO] Worker exiting (pid: 10465)
+[2019-06-18 21:02:00 +0800] [10461] [INFO] Shutting down: Master
+[2019-06-18 21:02:01 +0800] [10563] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 21:02:01 +0800] [10563] [INFO] Listening at: http://0.0.0.0:81 (10563)
+[2019-06-18 21:02:01 +0800] [10563] [INFO] Using worker: sync
+[2019-06-18 21:02:01 +0800] [10566] [INFO] Booting worker with pid: 10566
+[2019-06-18 21:02:01 +0800] [10567] [INFO] Booting worker with pid: 10567
+[2019-06-18 21:02:01 +0800] [10569] [INFO] Booting worker with pid: 10569
+[2019-06-18 21:06:39 +0800] [10563] [INFO] Handling signal: term
+[2019-06-18 21:06:39 +0800] [10569] [INFO] Worker exiting (pid: 10569)
+[2019-06-18 21:06:39 +0800] [10566] [INFO] Worker exiting (pid: 10566)
+[2019-06-18 21:06:39 +0800] [10567] [INFO] Worker exiting (pid: 10567)
+[2019-06-18 21:06:40 +0800] [10563] [INFO] Shutting down: Master
+[2019-06-18 21:06:41 +0800] [10643] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 21:06:41 +0800] [10643] [INFO] Listening at: http://0.0.0.0:81 (10643)
+[2019-06-18 21:06:41 +0800] [10643] [INFO] Using worker: sync
+[2019-06-18 21:06:41 +0800] [10646] [INFO] Booting worker with pid: 10646
+[2019-06-18 21:06:41 +0800] [10647] [INFO] Booting worker with pid: 10647
+[2019-06-18 21:06:41 +0800] [10649] [INFO] Booting worker with pid: 10649
+[2019-06-18 22:14:53 +0800] [10643] [INFO] Handling signal: term
+[2019-06-18 22:14:53 +0800] [10647] [INFO] Worker exiting (pid: 10647)
+[2019-06-18 22:14:53 +0800] [10649] [INFO] Worker exiting (pid: 10649)
+[2019-06-18 22:14:53 +0800] [10646] [INFO] Worker exiting (pid: 10646)
+[2019-06-18 22:14:54 +0800] [10643] [INFO] Shutting down: Master
+[2019-06-18 22:14:55 +0800] [11065] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 22:14:55 +0800] [11065] [INFO] Listening at: http://0.0.0.0:81 (11065)
+[2019-06-18 22:14:55 +0800] [11065] [INFO] Using worker: sync
+[2019-06-18 22:14:55 +0800] [11068] [INFO] Booting worker with pid: 11068
+[2019-06-18 22:14:55 +0800] [11069] [INFO] Booting worker with pid: 11069
+[2019-06-18 22:14:55 +0800] [11070] [INFO] Booting worker with pid: 11070
+[2019-06-18 22:18:14 +0800] [11065] [INFO] Handling signal: term
+[2019-06-18 22:18:14 +0800] [11069] [INFO] Worker exiting (pid: 11069)
+[2019-06-18 22:18:14 +0800] [11068] [INFO] Worker exiting (pid: 11068)
+[2019-06-18 22:18:14 +0800] [11070] [INFO] Worker exiting (pid: 11070)
+[2019-06-18 22:18:14 +0800] [11065] [INFO] Shutting down: Master
+[2019-06-18 22:18:15 +0800] [11128] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 22:18:15 +0800] [11128] [INFO] Listening at: http://0.0.0.0:81 (11128)
+[2019-06-18 22:18:15 +0800] [11128] [INFO] Using worker: sync
+[2019-06-18 22:18:15 +0800] [11131] [INFO] Booting worker with pid: 11131
+[2019-06-18 22:18:15 +0800] [11132] [INFO] Booting worker with pid: 11132
+[2019-06-18 22:18:15 +0800] [11135] [INFO] Booting worker with pid: 11135
+[2019-06-18 22:20:28 +0800] [11128] [INFO] Handling signal: term
+[2019-06-18 22:20:28 +0800] [11131] [INFO] Worker exiting (pid: 11131)
+[2019-06-18 22:20:28 +0800] [11135] [INFO] Worker exiting (pid: 11135)
+[2019-06-18 22:20:28 +0800] [11132] [INFO] Worker exiting (pid: 11132)
+[2019-06-18 22:20:28 +0800] [11128] [INFO] Shutting down: Master
+[2019-06-18 22:20:29 +0800] [11178] [INFO] Starting gunicorn 19.9.0
+[2019-06-18 22:20:29 +0800] [11178] [INFO] Listening at: http://0.0.0.0:81 (11178)
+[2019-06-18 22:20:29 +0800] [11178] [INFO] Using worker: sync
+[2019-06-18 22:20:29 +0800] [11181] [INFO] Booting worker with pid: 11181
+[2019-06-18 22:20:29 +0800] [11182] [INFO] Booting worker with pid: 11182
+[2019-06-18 22:20:29 +0800] [11183] [INFO] Booting worker with pid: 11183
+[2019-06-19 18:42:54 +0800] [11178] [CRITICAL] WORKER TIMEOUT (pid:11182)
+[2019-06-19 18:42:54 +0800] [11182] [INFO] Worker exiting (pid: 11182)
+[2019-06-19 18:42:54 +0800] [17737] [INFO] Booting worker with pid: 17737
+[2019-06-27 17:24:29 +0800] [11178] [INFO] Handling signal: term
+[2019-06-27 17:24:29 +0800] [17737] [INFO] Worker exiting (pid: 17737)
+[2019-06-27 17:24:29 +0800] [11183] [INFO] Worker exiting (pid: 11183)
+[2019-06-27 17:24:29 +0800] [11181] [INFO] Worker exiting (pid: 11181)
+[2019-06-27 17:24:30 +0800] [11178] [INFO] Shutting down: Master
+[2019-06-27 17:24:31 +0800] [13255] [INFO] Starting gunicorn 19.9.0
+[2019-06-27 17:24:31 +0800] [13255] [INFO] Listening at: http://0.0.0.0:81 (13255)
+[2019-06-27 17:24:31 +0800] [13255] [INFO] Using worker: sync
+[2019-06-27 17:24:31 +0800] [13258] [INFO] Booting worker with pid: 13258
+[2019-06-27 17:24:31 +0800] [13260] [INFO] Booting worker with pid: 13260
+[2019-06-27 17:24:31 +0800] [13261] [INFO] Booting worker with pid: 13261
+[2019-06-27 17:26:09 +0800] [13255] [INFO] Handling signal: term
+[2019-06-27 17:26:09 +0800] [13258] [INFO] Worker exiting (pid: 13258)
+[2019-06-27 17:26:09 +0800] [13261] [INFO] Worker exiting (pid: 13261)
+[2019-06-27 17:26:09 +0800] [13260] [INFO] Worker exiting (pid: 13260)
+[2019-06-27 17:26:09 +0800] [13255] [INFO] Shutting down: Master
+[2019-06-27 17:26:10 +0800] [13277] [INFO] Starting gunicorn 19.9.0
+[2019-06-27 17:26:10 +0800] [13277] [INFO] Listening at: http://0.0.0.0:81 (13277)
+[2019-06-27 17:26:10 +0800] [13277] [INFO] Using worker: sync
+[2019-06-27 17:26:10 +0800] [13280] [INFO] Booting worker with pid: 13280
+[2019-06-27 17:26:11 +0800] [13282] [INFO] Booting worker with pid: 13282
+[2019-06-27 17:26:11 +0800] [13283] [INFO] Booting worker with pid: 13283
+[2019-06-29 21:20:30 +0800] [13277] [INFO] Handling signal: term
+[2019-06-29 21:20:30 +0800] [13280] [INFO] Worker exiting (pid: 13280)
+[2019-06-29 21:20:30 +0800] [13282] [INFO] Worker exiting (pid: 13282)
+[2019-06-29 21:20:30 +0800] [13283] [INFO] Worker exiting (pid: 13283)
+[2019-06-29 21:20:31 +0800] [13277] [INFO] Shutting down: Master
+[2019-06-29 21:20:32 +0800] [29779] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 21:20:32 +0800] [29779] [INFO] Listening at: http://0.0.0.0:81 (29779)
+[2019-06-29 21:20:32 +0800] [29779] [INFO] Using worker: sync
+[2019-06-29 21:20:32 +0800] [29782] [INFO] Booting worker with pid: 29782
+[2019-06-29 21:20:32 +0800] [29783] [INFO] Booting worker with pid: 29783
+[2019-06-29 21:20:32 +0800] [29784] [INFO] Booting worker with pid: 29784
+[2019-06-29 21:29:11 +0800] [29779] [INFO] Handling signal: term
+[2019-06-29 21:29:11 +0800] [29784] [INFO] Worker exiting (pid: 29784)
+[2019-06-29 21:29:11 +0800] [29783] [INFO] Worker exiting (pid: 29783)
+[2019-06-29 21:29:11 +0800] [29782] [INFO] Worker exiting (pid: 29782)
+[2019-06-29 21:29:11 +0800] [29779] [INFO] Shutting down: Master
+[2019-06-29 21:29:12 +0800] [29875] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 21:29:12 +0800] [29875] [INFO] Listening at: http://0.0.0.0:81 (29875)
+[2019-06-29 21:29:12 +0800] [29875] [INFO] Using worker: sync
+[2019-06-29 21:29:12 +0800] [29878] [INFO] Booting worker with pid: 29878
+[2019-06-29 21:29:12 +0800] [29879] [INFO] Booting worker with pid: 29879
+[2019-06-29 21:29:13 +0800] [29880] [INFO] Booting worker with pid: 29880
+[2019-06-29 21:35:41 +0800] [29875] [INFO] Handling signal: term
+[2019-06-29 21:35:41 +0800] [29879] [INFO] Worker exiting (pid: 29879)
+[2019-06-29 21:35:41 +0800] [29880] [INFO] Worker exiting (pid: 29880)
+[2019-06-29 21:35:41 +0800] [29878] [INFO] Worker exiting (pid: 29878)
+[2019-06-29 21:35:41 +0800] [29875] [INFO] Shutting down: Master
+[2019-06-29 21:35:42 +0800] [30068] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 21:35:42 +0800] [30068] [INFO] Listening at: http://0.0.0.0:81 (30068)
+[2019-06-29 21:35:42 +0800] [30068] [INFO] Using worker: sync
+[2019-06-29 21:35:42 +0800] [30071] [INFO] Booting worker with pid: 30071
+[2019-06-29 21:35:42 +0800] [30072] [INFO] Booting worker with pid: 30072
+[2019-06-29 21:35:42 +0800] [30073] [INFO] Booting worker with pid: 30073
+[2019-06-29 21:36:48 +0800] [30068] [INFO] Handling signal: term
+[2019-06-29 21:36:48 +0800] [30072] [INFO] Worker exiting (pid: 30072)
+[2019-06-29 21:36:48 +0800] [30073] [INFO] Worker exiting (pid: 30073)
+[2019-06-29 21:36:48 +0800] [30071] [INFO] Worker exiting (pid: 30071)
+[2019-06-29 21:36:49 +0800] [30068] [INFO] Shutting down: Master
+[2019-06-29 21:36:50 +0800] [30098] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 21:36:50 +0800] [30098] [INFO] Listening at: http://0.0.0.0:81 (30098)
+[2019-06-29 21:36:50 +0800] [30098] [INFO] Using worker: sync
+[2019-06-29 21:36:50 +0800] [30101] [INFO] Booting worker with pid: 30101
+[2019-06-29 21:36:50 +0800] [30102] [INFO] Booting worker with pid: 30102
+[2019-06-29 21:36:50 +0800] [30103] [INFO] Booting worker with pid: 30103
+[2019-06-29 21:56:22 +0800] [30098] [INFO] Handling signal: term
+[2019-06-29 21:56:22 +0800] [30101] [INFO] Worker exiting (pid: 30101)
+[2019-06-29 21:56:22 +0800] [30102] [INFO] Worker exiting (pid: 30102)
+[2019-06-29 21:56:22 +0800] [30103] [INFO] Worker exiting (pid: 30103)
+[2019-06-29 21:56:22 +0800] [30098] [INFO] Shutting down: Master
+[2019-06-29 21:56:24 +0800] [30525] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 21:56:24 +0800] [30525] [INFO] Listening at: http://0.0.0.0:81 (30525)
+[2019-06-29 21:56:24 +0800] [30525] [INFO] Using worker: sync
+[2019-06-29 21:56:24 +0800] [30528] [INFO] Booting worker with pid: 30528
+[2019-06-29 21:56:24 +0800] [30530] [INFO] Booting worker with pid: 30530
+[2019-06-29 21:56:24 +0800] [30531] [INFO] Booting worker with pid: 30531
+[2019-06-29 22:01:35 +0800] [30525] [INFO] Handling signal: term
+[2019-06-29 22:01:35 +0800] [30530] [INFO] Worker exiting (pid: 30530)
+[2019-06-29 22:01:35 +0800] [30531] [INFO] Worker exiting (pid: 30531)
+[2019-06-29 22:01:35 +0800] [30528] [INFO] Worker exiting (pid: 30528)
+[2019-06-29 22:01:35 +0800] [30525] [INFO] Shutting down: Master
+[2019-06-29 22:01:36 +0800] [30614] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 22:01:36 +0800] [30614] [INFO] Listening at: http://0.0.0.0:81 (30614)
+[2019-06-29 22:01:36 +0800] [30614] [INFO] Using worker: sync
+[2019-06-29 22:01:36 +0800] [30617] [INFO] Booting worker with pid: 30617
+[2019-06-29 22:01:36 +0800] [30618] [INFO] Booting worker with pid: 30618
+[2019-06-29 22:01:36 +0800] [30619] [INFO] Booting worker with pid: 30619
+[2019-06-29 22:32:28 +0800] [30614] [INFO] Handling signal: term
+[2019-06-29 22:32:28 +0800] [30617] [INFO] Worker exiting (pid: 30617)
+[2019-06-29 22:32:28 +0800] [30618] [INFO] Worker exiting (pid: 30618)
+[2019-06-29 22:32:28 +0800] [30619] [INFO] Worker exiting (pid: 30619)
+[2019-06-29 22:32:28 +0800] [30614] [INFO] Shutting down: Master
+[2019-06-29 22:32:29 +0800] [30803] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 22:32:29 +0800] [30803] [INFO] Listening at: http://0.0.0.0:81 (30803)
+[2019-06-29 22:32:29 +0800] [30803] [INFO] Using worker: sync
+[2019-06-29 22:32:29 +0800] [30807] [INFO] Booting worker with pid: 30807
+[2019-06-29 22:32:29 +0800] [30808] [INFO] Booting worker with pid: 30808
+[2019-06-29 22:32:29 +0800] [30809] [INFO] Booting worker with pid: 30809
+[2019-06-29 22:36:02 +0800] [30803] [INFO] Handling signal: term
+[2019-06-29 22:36:02 +0800] [30808] [INFO] Worker exiting (pid: 30808)
+[2019-06-29 22:36:02 +0800] [30807] [INFO] Worker exiting (pid: 30807)
+[2019-06-29 22:36:02 +0800] [30809] [INFO] Worker exiting (pid: 30809)
+[2019-06-29 22:36:02 +0800] [30803] [INFO] Shutting down: Master
+[2019-06-29 22:36:03 +0800] [30832] [INFO] Starting gunicorn 19.9.0
+[2019-06-29 22:36:03 +0800] [30832] [INFO] Listening at: http://0.0.0.0:81 (30832)
+[2019-06-29 22:36:03 +0800] [30832] [INFO] Using worker: sync
+[2019-06-29 22:36:03 +0800] [30835] [INFO] Booting worker with pid: 30835
+[2019-06-29 22:36:03 +0800] [30837] [INFO] Booting worker with pid: 30837
+[2019-06-29 22:36:04 +0800] [30838] [INFO] Booting worker with pid: 30838
+[2019-07-07 09:04:56 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:30835)
+[2019-07-07 09:04:56 +0800] [30835] [INFO] Worker exiting (pid: 30835)
+[2019-07-07 09:04:56 +0800] [22479] [INFO] Booting worker with pid: 22479
+[2019-07-07 09:05:27 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:30838)
+[2019-07-07 09:05:27 +0800] [30838] [INFO] Worker exiting (pid: 30838)
+[2019-07-07 09:05:27 +0800] [22486] [INFO] Booting worker with pid: 22486
+[2019-07-30 10:32:53 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:30837)
+[2019-07-30 10:32:53 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:22486)
+[2019-07-30 10:32:53 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:22479)
+[2019-07-30 10:32:53 +0800] [22486] [INFO] Worker exiting (pid: 22486)
+[2019-07-30 10:32:53 +0800] [22479] [INFO] Worker exiting (pid: 22479)
+[2019-07-30 10:32:53 +0800] [30837] [INFO] Worker exiting (pid: 30837)
+[2019-07-30 10:32:54 +0800] [8256] [INFO] Booting worker with pid: 8256
+[2019-07-30 10:32:54 +0800] [8257] [INFO] Booting worker with pid: 8257
+[2019-07-30 10:32:54 +0800] [8258] [INFO] Booting worker with pid: 8258
+[2019-07-30 10:33:25 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8256)
+[2019-07-30 10:33:25 +0800] [8256] [INFO] Worker exiting (pid: 8256)
+[2019-07-30 10:33:25 +0800] [8264] [INFO] Booting worker with pid: 8264
+[2019-07-30 10:33:49 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8257)
+[2019-07-30 10:33:49 +0800] [8257] [INFO] Worker exiting (pid: 8257)
+[2019-07-30 10:33:49 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8258)
+[2019-07-30 10:33:49 +0800] [8258] [INFO] Worker exiting (pid: 8258)
+[2019-07-30 10:33:49 +0800] [8268] [INFO] Booting worker with pid: 8268
+[2019-07-30 10:33:49 +0800] [8269] [INFO] Booting worker with pid: 8269
+[2019-07-30 10:33:56 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8264)
+[2019-07-30 10:33:56 +0800] [8264] [INFO] Worker exiting (pid: 8264)
+[2019-07-30 10:33:56 +0800] [8272] [INFO] Booting worker with pid: 8272
+[2019-07-30 14:48:15 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8269)
+[2019-07-30 14:48:15 +0800] [8269] [INFO] Worker exiting (pid: 8269)
+[2019-07-30 14:48:15 +0800] [9651] [INFO] Booting worker with pid: 9651
+[2019-08-15 22:26:16 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8272)
+[2019-08-15 22:26:16 +0800] [8272] [INFO] Worker exiting (pid: 8272)
+[2019-08-15 22:26:16 +0800] [3673] [INFO] Booting worker with pid: 3673
+[2019-08-21 03:42:03 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:3673)
+[2019-08-21 03:42:03 +0800] [3673] [INFO] Worker exiting (pid: 3673)
+[2019-08-21 03:42:04 +0800] [10839] [INFO] Booting worker with pid: 10839
+[2019-08-31 18:18:08 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:8268)
+[2019-08-31 18:18:08 +0800] [8268] [INFO] Worker exiting (pid: 8268)
+[2019-08-31 18:18:08 +0800] [26820] [INFO] Booting worker with pid: 26820
+[2019-08-31 18:19:03 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:10839)
+[2019-08-31 18:19:03 +0800] [10839] [INFO] Worker exiting (pid: 10839)
+[2019-08-31 18:19:04 +0800] [26825] [INFO] Booting worker with pid: 26825
+[2019-08-31 18:20:26 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26820)
+[2019-08-31 18:20:26 +0800] [26820] [INFO] Worker exiting (pid: 26820)
+[2019-08-31 18:20:26 +0800] [26835] [INFO] Booting worker with pid: 26835
+[2019-08-31 18:20:40 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:9651)
+[2019-08-31 18:20:40 +0800] [9651] [INFO] Worker exiting (pid: 9651)
+[2019-08-31 18:20:40 +0800] [26838] [INFO] Booting worker with pid: 26838
+[2019-08-31 18:21:40 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26825)
+[2019-08-31 18:21:40 +0800] [26825] [INFO] Worker exiting (pid: 26825)
+[2019-08-31 18:21:40 +0800] [26844] [INFO] Booting worker with pid: 26844
+[2019-08-31 18:22:34 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26835)
+[2019-08-31 18:22:34 +0800] [26835] [INFO] Worker exiting (pid: 26835)
+[2019-08-31 18:22:34 +0800] [26851] [INFO] Booting worker with pid: 26851
+[2019-08-31 18:23:03 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26844)
+[2019-08-31 18:23:03 +0800] [26844] [INFO] Worker exiting (pid: 26844)
+[2019-08-31 18:23:03 +0800] [26856] [INFO] Booting worker with pid: 26856
+[2019-08-31 18:23:35 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26838)
+[2019-08-31 18:23:35 +0800] [26838] [INFO] Worker exiting (pid: 26838)
+[2019-08-31 18:23:35 +0800] [26860] [INFO] Booting worker with pid: 26860
+[2019-08-31 18:25:09 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26860)
+[2019-08-31 18:25:09 +0800] [26860] [INFO] Worker exiting (pid: 26860)
+[2019-08-31 18:25:09 +0800] [26874] [INFO] Booting worker with pid: 26874
+[2019-08-31 18:25:49 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26851)
+[2019-08-31 18:25:49 +0800] [26851] [INFO] Worker exiting (pid: 26851)
+[2019-08-31 18:25:49 +0800] [26880] [INFO] Booting worker with pid: 26880
+[2019-08-31 18:26:05 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26856)
+[2019-08-31 18:26:05 +0800] [26856] [INFO] Worker exiting (pid: 26856)
+[2019-08-31 18:26:05 +0800] [26883] [INFO] Booting worker with pid: 26883
+[2019-08-31 18:27:30 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26874)
+[2019-08-31 18:27:30 +0800] [26874] [INFO] Worker exiting (pid: 26874)
+[2019-08-31 18:27:30 +0800] [26891] [INFO] Booting worker with pid: 26891
+[2019-09-24 03:18:07 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26883)
+[2019-09-24 03:18:07 +0800] [26883] [INFO] Worker exiting (pid: 26883)
+[2019-09-24 03:18:07 +0800] [9723] [INFO] Booting worker with pid: 9723
+[2019-09-24 03:18:08 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26891)
+[2019-09-24 03:18:08 +0800] [26891] [INFO] Worker exiting (pid: 26891)
+[2019-09-24 03:18:08 +0800] [9725] [INFO] Booting worker with pid: 9725
+[2019-09-24 14:14:47 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:9725)
+[2019-09-24 14:14:47 +0800] [9725] [INFO] Worker exiting (pid: 9725)
+[2019-09-24 14:14:47 +0800] [13222] [INFO] Booting worker with pid: 13222
+[2019-09-25 07:31:57 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:13222)
+[2019-09-25 07:31:57 +0800] [13222] [INFO] Worker exiting (pid: 13222)
+[2019-09-25 07:31:57 +0800] [18682] [INFO] Booting worker with pid: 18682
+[2019-09-25 07:32:28 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:26880)
+[2019-09-25 07:32:28 +0800] [26880] [INFO] Worker exiting (pid: 26880)
+[2019-09-25 07:32:28 +0800] [18686] [INFO] Booting worker with pid: 18686
+[2019-09-27 11:58:28 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:18682)
+[2019-09-27 11:58:28 +0800] [18682] [INFO] Worker exiting (pid: 18682)
+[2019-09-27 11:58:29 +0800] [2884] [INFO] Booting worker with pid: 2884
+[2019-09-28 13:31:38 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:18686)
+[2019-09-28 13:31:38 +0800] [18686] [INFO] Worker exiting (pid: 18686)
+[2019-09-28 13:31:38 +0800] [10956] [INFO] Booting worker with pid: 10956
+[2019-09-30 10:56:41 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:10956)
+[2019-09-30 10:56:41 +0800] [10956] [INFO] Worker exiting (pid: 10956)
+[2019-09-30 10:56:41 +0800] [25238] [INFO] Booting worker with pid: 25238
+[2019-10-06 11:43:34 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:9723)
+[2019-10-06 11:43:34 +0800] [9723] [INFO] Worker exiting (pid: 9723)
+[2019-10-06 11:43:35 +0800] [6309] [INFO] Booting worker with pid: 6309
+[2019-10-07 22:20:53 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:2884)
+[2019-10-07 22:20:53 +0800] [2884] [INFO] Worker exiting (pid: 2884)
+[2019-10-07 22:20:53 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:25238)
+[2019-10-07 22:20:53 +0800] [25238] [INFO] Worker exiting (pid: 25238)
+[2019-10-07 22:20:54 +0800] [17243] [INFO] Booting worker with pid: 17243
+[2019-10-07 22:20:54 +0800] [17245] [INFO] Booting worker with pid: 17245
+[2019-10-07 22:21:14 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:6309)
+[2019-10-07 22:21:14 +0800] [6309] [INFO] Worker exiting (pid: 6309)
+[2019-10-07 22:21:14 +0800] [17250] [INFO] Booting worker with pid: 17250
+[2019-10-07 22:21:25 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:17243)
+[2019-10-07 22:21:25 +0800] [17243] [INFO] Worker exiting (pid: 17243)
+[2019-10-07 22:21:25 +0800] [17253] [INFO] Booting worker with pid: 17253
+[2019-10-07 23:27:33 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:17253)
+[2019-10-07 23:27:33 +0800] [17253] [INFO] Worker exiting (pid: 17253)
+[2019-10-07 23:27:33 +0800] [17588] [INFO] Booting worker with pid: 17588
+[2019-10-10 08:29:05 +0800] [30832] [CRITICAL] WORKER TIMEOUT (pid:17250)
+[2019-10-10 08:29:05 +0800] [17250] [INFO] Worker exiting (pid: 17250)
+[2019-10-10 08:29:05 +0800] [3361] [INFO] Booting worker with pid: 3361
+[2019-10-10 23:20:44 +0800] [30832] [INFO] Handling signal: term
+[2019-10-10 23:20:44 +0800] [3361] [INFO] Worker exiting (pid: 3361)
+[2019-10-10 23:20:44 +0800] [17588] [INFO] Worker exiting (pid: 17588)
+[2019-10-10 23:20:44 +0800] [17245] [INFO] Worker exiting (pid: 17245)
+[2019-10-10 23:20:45 +0800] [30832] [INFO] Shutting down: Master
+[2019-10-10 23:20:46 +0800] [8912] [INFO] Starting gunicorn 19.9.0
+[2019-10-10 23:20:46 +0800] [8912] [INFO] Listening at: http://0.0.0.0:81 (8912)
+[2019-10-10 23:20:46 +0800] [8912] [INFO] Using worker: sync
+[2019-10-10 23:20:46 +0800] [8915] [INFO] Booting worker with pid: 8915
+[2019-10-10 23:20:46 +0800] [8916] [INFO] Booting worker with pid: 8916
+[2019-10-10 23:20:46 +0800] [8917] [INFO] Booting worker with pid: 8917
+[2019-10-12 02:23:29 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:8917)
+[2019-10-12 02:23:29 +0800] [8917] [INFO] Worker exiting (pid: 8917)
+[2019-10-12 02:23:29 +0800] [17337] [INFO] Booting worker with pid: 17337
+[2019-10-12 04:18:34 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:17337)
+[2019-10-12 04:18:34 +0800] [17337] [INFO] Worker exiting (pid: 17337)
+[2019-10-12 04:18:34 +0800] [17918] [INFO] Booting worker with pid: 17918
+[2019-10-14 03:48:41 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:8916)
+[2019-10-14 03:48:41 +0800] [8916] [INFO] Worker exiting (pid: 8916)
+[2019-10-14 03:48:41 +0800] [430] [INFO] Booting worker with pid: 430
+[2019-10-14 09:24:18 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:17918)
+[2019-10-14 09:24:18 +0800] [17918] [INFO] Worker exiting (pid: 17918)
+[2019-10-14 09:24:18 +0800] [2340] [INFO] Booting worker with pid: 2340
+[2019-10-15 22:31:44 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:8915)
+[2019-10-15 22:31:44 +0800] [8915] [INFO] Worker exiting (pid: 8915)
+[2019-10-15 22:31:44 +0800] [14042] [INFO] Booting worker with pid: 14042
+[2019-10-16 23:53:22 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:430)
+[2019-10-16 23:53:22 +0800] [430] [INFO] Worker exiting (pid: 430)
+[2019-10-16 23:53:22 +0800] [22030] [INFO] Booting worker with pid: 22030
+[2019-10-17 17:05:07 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:2340)
+[2019-10-17 17:05:07 +0800] [2340] [INFO] Worker exiting (pid: 2340)
+[2019-10-17 17:05:07 +0800] [27482] [INFO] Booting worker with pid: 27482
+[2019-10-17 23:46:02 +0800] [8912] [CRITICAL] WORKER TIMEOUT (pid:22030)
+[2019-10-17 23:46:02 +0800] [22030] [INFO] Worker exiting (pid: 22030)
+[2019-10-17 23:46:02 +0800] [29544] [INFO] Booting worker with pid: 29544
+[2019-10-19 10:23:07 +0800] [8912] [INFO] Handling signal: term
+[2019-10-19 10:23:07 +0800] [29544] [INFO] Worker exiting (pid: 29544)
+[2019-10-19 10:23:07 +0800] [14042] [INFO] Worker exiting (pid: 14042)
+[2019-10-19 10:23:07 +0800] [27482] [INFO] Worker exiting (pid: 27482)
+[2019-10-19 10:23:07 +0800] [8912] [INFO] Shutting down: Master
+[2019-10-19 10:23:08 +0800] [8123] [INFO] Starting gunicorn 19.9.0
+[2019-10-19 10:23:08 +0800] [8123] [INFO] Listening at: http://0.0.0.0:81 (8123)
+[2019-10-19 10:23:08 +0800] [8123] [INFO] Using worker: sync
+[2019-10-19 10:23:08 +0800] [8126] [INFO] Booting worker with pid: 8126
+[2019-10-19 10:23:08 +0800] [8127] [INFO] Booting worker with pid: 8127
+[2019-10-19 10:23:08 +0800] [8129] [INFO] Booting worker with pid: 8129
+[2019-10-19 19:37:04 +0800] [8123] [CRITICAL] WORKER TIMEOUT (pid:8129)
+[2019-10-19 19:37:04 +0800] [8129] [INFO] Worker exiting (pid: 8129)
+[2019-10-19 19:37:04 +0800] [10994] [INFO] Booting worker with pid: 10994
+[2019-10-21 14:52:12 +0800] [8123] [CRITICAL] WORKER TIMEOUT (pid:8126)
+[2019-10-21 14:52:12 +0800] [8126] [INFO] Worker exiting (pid: 8126)
+[2019-10-21 14:52:12 +0800] [26826] [INFO] Booting worker with pid: 26826
+[2019-10-24 23:33:31 +0800] [8123] [CRITICAL] WORKER TIMEOUT (pid:26826)
+[2019-10-24 23:33:31 +0800] [26826] [INFO] Worker exiting (pid: 26826)
+[2019-10-24 23:33:31 +0800] [19812] [INFO] Booting worker with pid: 19812
+[2019-10-26 04:06:01 +0800] [8123] [CRITICAL] WORKER TIMEOUT (pid:19812)
+[2019-10-26 04:06:01 +0800] [19812] [INFO] Worker exiting (pid: 19812)
+[2019-10-26 04:06:01 +0800] [29066] [INFO] Booting worker with pid: 29066
+[2019-10-26 06:30:19 +0800] [8123] [CRITICAL] WORKER TIMEOUT (pid:8127)
+[2019-10-26 06:30:19 +0800] [8127] [INFO] Worker exiting (pid: 8127)
+[2019-10-26 06:30:19 +0800] [29955] [INFO] Booting worker with pid: 29955
+[2019-10-27 21:03:08 +0800] [8123] [INFO] Handling signal: term
+[2019-10-27 21:03:08 +0800] [10994] [INFO] Worker exiting (pid: 10994)
+[2019-10-27 21:03:08 +0800] [29955] [INFO] Worker exiting (pid: 29955)
+[2019-10-27 21:03:08 +0800] [29066] [INFO] Worker exiting (pid: 29066)
+[2019-10-27 21:03:08 +0800] [8123] [INFO] Shutting down: Master
+[2019-10-27 21:03:09 +0800] [10706] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:03:09 +0800] [10706] [INFO] Listening at: http://0.0.0.0:81 (10706)
+[2019-10-27 21:03:09 +0800] [10706] [INFO] Using worker: sync
+[2019-10-27 21:03:09 +0800] [10709] [INFO] Booting worker with pid: 10709
+[2019-10-27 21:03:10 +0800] [10710] [INFO] Booting worker with pid: 10710
+[2019-10-27 21:03:10 +0800] [10712] [INFO] Booting worker with pid: 10712
+[2019-10-27 21:10:19 +0800] [10706] [CRITICAL] WORKER TIMEOUT (pid:10710)
+[2019-10-27 21:10:19 +0800] [10710] [INFO] Worker exiting (pid: 10710)
+[2019-10-27 21:10:19 +0800] [11376] [INFO] Booting worker with pid: 11376
+[2019-10-27 21:15:38 +0800] [10706] [INFO] Handling signal: term
+[2019-10-27 21:15:38 +0800] [10712] [INFO] Worker exiting (pid: 10712)
+[2019-10-27 21:15:38 +0800] [10709] [INFO] Worker exiting (pid: 10709)
+[2019-10-27 21:15:38 +0800] [11376] [INFO] Worker exiting (pid: 11376)
+[2019-10-27 21:15:38 +0800] [10706] [INFO] Shutting down: Master
+[2019-10-27 21:15:40 +0800] [11671] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:15:40 +0800] [11671] [INFO] Listening at: http://0.0.0.0:81 (11671)
+[2019-10-27 21:15:40 +0800] [11671] [INFO] Using worker: sync
+[2019-10-27 21:15:40 +0800] [11674] [INFO] Booting worker with pid: 11674
+[2019-10-27 21:15:40 +0800] [11675] [INFO] Booting worker with pid: 11675
+[2019-10-27 21:15:40 +0800] [11676] [INFO] Booting worker with pid: 11676
+[2019-10-27 21:17:40 +0800] [11840] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:17:40 +0800] [11840] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:40 +0800] [11840] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:40 +0800] [11674] [INFO] Parent changed, shutting down: <Worker 11674>
+[2019-10-27 21:17:40 +0800] [11674] [INFO] Worker exiting (pid: 11674)
+[2019-10-27 21:17:41 +0800] [11675] [INFO] Parent changed, shutting down: <Worker 11675>
+[2019-10-27 21:17:41 +0800] [11675] [INFO] Worker exiting (pid: 11675)
+[2019-10-27 21:17:41 +0800] [11676] [INFO] Parent changed, shutting down: <Worker 11676>
+[2019-10-27 21:17:41 +0800] [11676] [INFO] Worker exiting (pid: 11676)
+[2019-10-27 21:17:41 +0800] [11840] [INFO] Listening at: http://0.0.0.0:81 (11840)
+[2019-10-27 21:17:41 +0800] [11840] [INFO] Using worker: sync
+[2019-10-27 21:17:41 +0800] [11871] [INFO] Booting worker with pid: 11871
+[2019-10-27 21:17:41 +0800] [11872] [INFO] Booting worker with pid: 11872
+[2019-10-27 21:17:41 +0800] [11873] [INFO] Booting worker with pid: 11873
+[2019-10-27 21:17:53 +0800] [11967] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:17:53 +0800] [11967] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:53 +0800] [11967] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:54 +0800] [11967] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:54 +0800] [11967] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:55 +0800] [11967] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:55 +0800] [11967] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:56 +0800] [11967] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:56 +0800] [11967] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:57 +0800] [11871] [INFO] Parent changed, shutting down: <Worker 11871>
+[2019-10-27 21:17:57 +0800] [11871] [INFO] Worker exiting (pid: 11871)
+[2019-10-27 21:17:57 +0800] [11872] [INFO] Parent changed, shutting down: <Worker 11872>
+[2019-10-27 21:17:57 +0800] [11872] [INFO] Worker exiting (pid: 11872)
+[2019-10-27 21:17:57 +0800] [11873] [INFO] Parent changed, shutting down: <Worker 11873>
+[2019-10-27 21:17:57 +0800] [11873] [INFO] Worker exiting (pid: 11873)
+[2019-10-27 21:17:57 +0800] [11967] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2019-10-27 21:17:57 +0800] [11967] [ERROR] Retrying in 1 second.
+[2019-10-27 21:17:58 +0800] [11967] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2019-10-27 21:17:59 +0800] [12029] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:17:59 +0800] [12029] [INFO] Listening at: http://0.0.0.0:81 (12029)
+[2019-10-27 21:17:59 +0800] [12029] [INFO] Using worker: sync
+[2019-10-27 21:17:59 +0800] [12032] [INFO] Booting worker with pid: 12032
+[2019-10-27 21:17:59 +0800] [12033] [INFO] Booting worker with pid: 12033
+[2019-10-27 21:17:59 +0800] [12034] [INFO] Booting worker with pid: 12034
+[2019-10-27 21:22:22 +0800] [12029] [CRITICAL] WORKER TIMEOUT (pid:12032)
+[2019-10-27 21:22:22 +0800] [12032] [INFO] Worker exiting (pid: 12032)
+[2019-10-27 21:22:22 +0800] [12029] [CRITICAL] WORKER TIMEOUT (pid:12034)
+[2019-10-27 21:22:22 +0800] [12034] [INFO] Worker exiting (pid: 12034)
+[2019-10-27 21:22:22 +0800] [12469] [INFO] Booting worker with pid: 12469
+[2019-10-27 21:22:22 +0800] [12470] [INFO] Booting worker with pid: 12470
+[2019-10-27 21:26:18 +0800] [12029] [INFO] Handling signal: term
+[2019-10-27 21:26:18 +0800] [12033] [INFO] Worker exiting (pid: 12033)
+[2019-10-27 21:26:18 +0800] [12469] [INFO] Worker exiting (pid: 12469)
+[2019-10-27 21:26:18 +0800] [12470] [INFO] Worker exiting (pid: 12470)
+[2019-10-27 21:26:18 +0800] [12029] [INFO] Shutting down: Master
+[2019-10-27 21:26:20 +0800] [12956] [INFO] Starting gunicorn 19.9.0
+[2019-10-27 21:26:20 +0800] [12956] [INFO] Listening at: http://0.0.0.0:81 (12956)
+[2019-10-27 21:26:20 +0800] [12956] [INFO] Using worker: sync
+[2019-10-27 21:26:20 +0800] [12959] [INFO] Booting worker with pid: 12959
+[2019-10-27 21:26:20 +0800] [12960] [INFO] Booting worker with pid: 12960
+[2019-10-27 21:26:20 +0800] [12961] [INFO] Booting worker with pid: 12961
+[2019-10-28 07:24:21 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:12961)
+[2019-10-28 07:24:21 +0800] [12961] [INFO] Worker exiting (pid: 12961)
+[2019-10-28 07:24:21 +0800] [16805] [INFO] Booting worker with pid: 16805
+[2019-10-30 07:31:45 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:12959)
+[2019-10-30 07:31:45 +0800] [12959] [INFO] Worker exiting (pid: 12959)
+[2019-10-30 07:31:45 +0800] [31922] [INFO] Booting worker with pid: 31922
+[2019-11-03 21:07:40 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:12960)
+[2019-11-03 21:07:40 +0800] [12960] [INFO] Worker exiting (pid: 12960)
+[2019-11-03 21:07:40 +0800] [1582] [INFO] Booting worker with pid: 1582
+[2019-11-04 01:46:25 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:16805)
+[2019-11-04 01:46:25 +0800] [16805] [INFO] Worker exiting (pid: 16805)
+[2019-11-04 01:46:25 +0800] [2987] [INFO] Booting worker with pid: 2987
+[2019-11-05 23:00:23 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:1582)
+[2019-11-05 23:00:23 +0800] [1582] [INFO] Worker exiting (pid: 1582)
+[2019-11-05 23:00:23 +0800] [17209] [INFO] Booting worker with pid: 17209
+[2019-11-07 01:23:07 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:31922)
+[2019-11-07 01:23:07 +0800] [31922] [INFO] Worker exiting (pid: 31922)
+[2019-11-07 01:23:07 +0800] [25529] [INFO] Booting worker with pid: 25529
+[2019-11-11 09:31:14 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:2987)
+[2019-11-11 09:31:14 +0800] [2987] [INFO] Worker exiting (pid: 2987)
+[2019-11-11 09:31:15 +0800] [25944] [INFO] Booting worker with pid: 25944
+[2019-11-14 06:30:36 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:25529)
+[2019-11-14 06:30:36 +0800] [25529] [INFO] Worker exiting (pid: 25529)
+[2019-11-14 06:30:36 +0800] [15293] [INFO] Booting worker with pid: 15293
+[2019-11-15 04:36:31 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:25944)
+[2019-11-15 04:36:31 +0800] [25944] [INFO] Worker exiting (pid: 25944)
+[2019-11-15 04:36:31 +0800] [22073] [INFO] Booting worker with pid: 22073
+[2019-11-15 09:55:26 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:15293)
+[2019-11-15 09:55:26 +0800] [15293] [INFO] Worker exiting (pid: 15293)
+[2019-11-15 09:55:27 +0800] [23846] [INFO] Booting worker with pid: 23846
+[2019-11-23 03:12:22 +0800] [12956] [CRITICAL] WORKER TIMEOUT (pid:22073)
+[2019-11-23 03:12:22 +0800] [22073] [INFO] Worker exiting (pid: 22073)
+[2019-11-23 03:12:22 +0800] [17785] [INFO] Booting worker with pid: 17785
+[2019-11-25 14:14:11 +0800] [12956] [INFO] Handling signal: term
+[2019-11-25 14:14:11 +0800] [23846] [INFO] Worker exiting (pid: 23846)
+[2019-11-25 14:14:11 +0800] [17785] [INFO] Worker exiting (pid: 17785)
+[2019-11-25 14:14:11 +0800] [17209] [INFO] Worker exiting (pid: 17209)
+[2019-11-25 14:14:12 +0800] [12956] [INFO] Shutting down: Master
+[2019-11-25 14:14:13 +0800] [4431] [INFO] Starting gunicorn 19.9.0
+[2019-11-25 14:14:13 +0800] [4431] [INFO] Listening at: http://0.0.0.0:81 (4431)
+[2019-11-25 14:14:13 +0800] [4431] [INFO] Using worker: sync
+[2019-11-25 14:14:13 +0800] [4434] [INFO] Booting worker with pid: 4434
+[2019-11-25 14:14:13 +0800] [4435] [INFO] Booting worker with pid: 4435
+[2019-11-25 14:14:13 +0800] [4436] [INFO] Booting worker with pid: 4436
+[2019-12-06 13:22:32 +0800] [4431] [CRITICAL] WORKER TIMEOUT (pid:4435)
+[2019-12-06 13:22:32 +0800] [4435] [INFO] Worker exiting (pid: 4435)
+[2019-12-06 13:22:32 +0800] [23475] [INFO] Booting worker with pid: 23475
+[2020-01-17 15:05:16 +0000] [2688] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:05:16 +0000] [2688] [INFO] Listening at: http://0.0.0.0:81 (2688)
+[2020-01-17 15:05:16 +0000] [2688] [INFO] Using worker: sync
+[2020-01-17 15:05:16 +0000] [2692] [INFO] Booting worker with pid: 2692
+[2020-01-17 15:05:16 +0000] [2693] [INFO] Booting worker with pid: 2693
+[2020-01-17 15:05:16 +0000] [2692] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/__init__.py", line 1, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2020-01-17 15:05:16 +0000] [2692] [INFO] Worker exiting (pid: 2692)
+[2020-01-17 15:05:16 +0000] [2693] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/root/mysite/myblog/myblog/__init__.py", line 1, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2020-01-17 15:05:16 +0000] [2693] [INFO] Worker exiting (pid: 2693)
+[2020-01-17 15:05:16 +0000] [2688] [INFO] Shutting down: Master
+[2020-01-17 15:05:16 +0000] [2688] [INFO] Reason: Worker failed to boot.
+[2020-01-17 15:12:10 +0800] [2969] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:12:10 +0800] [2969] [INFO] Listening at: http://0.0.0.0:81 (2969)
+[2020-01-17 15:12:10 +0800] [2969] [INFO] Using worker: sync
+[2020-01-17 15:12:10 +0800] [2973] [INFO] Booting worker with pid: 2973
+[2020-01-17 15:12:10 +0800] [2974] [INFO] Booting worker with pid: 2974
+[2020-01-17 15:12:11 +0800] [2975] [INFO] Booting worker with pid: 2975
+[2020-01-17 15:13:30 +0800] [2969] [INFO] Handling signal: int
+[2020-01-17 15:13:30 +0800] [2973] [INFO] Worker exiting (pid: 2973)
+[2020-01-17 15:13:30 +0800] [2974] [INFO] Worker exiting (pid: 2974)
+[2020-01-17 15:13:30 +0800] [2975] [INFO] Worker exiting (pid: 2975)
+[2020-01-17 15:13:31 +0800] [2969] [INFO] Shutting down: Master
+[2020-01-17 15:14:35 +0800] [3021] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:14:35 +0800] [3021] [INFO] Listening at: http://0.0.0.0:81 (3021)
+[2020-01-17 15:14:35 +0800] [3021] [INFO] Using worker: sync
+[2020-01-17 15:14:35 +0800] [3032] [INFO] Booting worker with pid: 3032
+[2020-01-17 15:14:35 +0800] [3033] [INFO] Booting worker with pid: 3033
+[2020-01-17 15:14:35 +0800] [3035] [INFO] Booting worker with pid: 3035
+[2020-01-17 15:22:59 +0800] [3276] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:22:59 +0800] [3276] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:22:59 +0800] [3276] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:00 +0800] [3276] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:00 +0800] [3276] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:01 +0800] [3276] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:01 +0800] [3276] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:02 +0800] [3276] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:02 +0800] [3276] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:03 +0800] [3276] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:03 +0800] [3276] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:04 +0800] [3276] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:05 +0800] [3281] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:05 +0800] [3281] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:05 +0800] [3281] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:06 +0800] [3281] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:06 +0800] [3281] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:07 +0800] [3281] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:07 +0800] [3281] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:08 +0800] [3281] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:08 +0800] [3281] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:09 +0800] [3281] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:09 +0800] [3281] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:10 +0800] [3281] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:11 +0800] [3284] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:11 +0800] [3284] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:11 +0800] [3284] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:12 +0800] [3284] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:12 +0800] [3284] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:13 +0800] [3284] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:13 +0800] [3284] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:14 +0800] [3284] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:14 +0800] [3284] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:15 +0800] [3284] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:15 +0800] [3284] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:16 +0800] [3284] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:17 +0800] [3288] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:17 +0800] [3288] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:17 +0800] [3288] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:18 +0800] [3288] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:18 +0800] [3288] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:19 +0800] [3288] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:19 +0800] [3288] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:20 +0800] [3288] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:20 +0800] [3288] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:21 +0800] [3288] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:21 +0800] [3288] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:22 +0800] [3288] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:23 +0800] [3291] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:23 +0800] [3291] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:23 +0800] [3291] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:24 +0800] [3291] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:24 +0800] [3291] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:25 +0800] [3291] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:25 +0800] [3291] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:26 +0800] [3291] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:26 +0800] [3291] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:27 +0800] [3291] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:27 +0800] [3291] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:28 +0800] [3291] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:30 +0800] [3295] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:30 +0800] [3295] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:30 +0800] [3295] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:31 +0800] [3295] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:31 +0800] [3295] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:32 +0800] [3295] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:32 +0800] [3295] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:33 +0800] [3295] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:33 +0800] [3295] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:34 +0800] [3295] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:34 +0800] [3295] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:35 +0800] [3295] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:36 +0800] [3298] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:36 +0800] [3298] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:36 +0800] [3298] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:37 +0800] [3298] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:37 +0800] [3298] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:38 +0800] [3298] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:38 +0800] [3298] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:39 +0800] [3298] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:39 +0800] [3298] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:40 +0800] [3298] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:40 +0800] [3298] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:41 +0800] [3298] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:43 +0800] [3301] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:43 +0800] [3301] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:43 +0800] [3301] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:44 +0800] [3301] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:44 +0800] [3301] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:45 +0800] [3301] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:45 +0800] [3301] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:46 +0800] [3301] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:46 +0800] [3301] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:47 +0800] [3301] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:47 +0800] [3301] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:48 +0800] [3301] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:49 +0800] [3306] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:49 +0800] [3306] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:49 +0800] [3306] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:50 +0800] [3306] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:50 +0800] [3306] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:51 +0800] [3306] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:51 +0800] [3306] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:52 +0800] [3306] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:52 +0800] [3306] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:53 +0800] [3306] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:53 +0800] [3306] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:54 +0800] [3306] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:23:55 +0800] [3309] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:23:55 +0800] [3309] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:55 +0800] [3309] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:56 +0800] [3309] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:56 +0800] [3309] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:57 +0800] [3309] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:57 +0800] [3309] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:58 +0800] [3309] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:58 +0800] [3309] [ERROR] Retrying in 1 second.
+[2020-01-17 15:23:59 +0800] [3309] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:23:59 +0800] [3309] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:00 +0800] [3309] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:02 +0800] [3313] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:02 +0800] [3313] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:02 +0800] [3313] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:03 +0800] [3313] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:03 +0800] [3313] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:04 +0800] [3313] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:04 +0800] [3313] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:05 +0800] [3313] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:05 +0800] [3313] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:06 +0800] [3313] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:06 +0800] [3313] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:07 +0800] [3313] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:08 +0800] [3316] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:08 +0800] [3316] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:08 +0800] [3316] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:09 +0800] [3316] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:09 +0800] [3316] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:10 +0800] [3316] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:10 +0800] [3316] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:11 +0800] [3316] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:11 +0800] [3316] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:12 +0800] [3316] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:12 +0800] [3316] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:13 +0800] [3316] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:14 +0800] [3320] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:14 +0800] [3320] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:14 +0800] [3320] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:15 +0800] [3320] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:15 +0800] [3320] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:16 +0800] [3320] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:16 +0800] [3320] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:17 +0800] [3320] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:17 +0800] [3320] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:18 +0800] [3320] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:18 +0800] [3320] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:19 +0800] [3320] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:20 +0800] [3323] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:20 +0800] [3323] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:20 +0800] [3323] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:21 +0800] [3323] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:21 +0800] [3323] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:22 +0800] [3323] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:22 +0800] [3323] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:23 +0800] [3323] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:23 +0800] [3323] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:24 +0800] [3323] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:24 +0800] [3323] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:25 +0800] [3323] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:27 +0800] [3326] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:27 +0800] [3326] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:27 +0800] [3326] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:28 +0800] [3326] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:28 +0800] [3326] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:29 +0800] [3326] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:29 +0800] [3326] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:30 +0800] [3326] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:30 +0800] [3326] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:31 +0800] [3326] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:31 +0800] [3326] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:32 +0800] [3326] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:33 +0800] [3330] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:33 +0800] [3330] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:33 +0800] [3330] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:34 +0800] [3330] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:34 +0800] [3330] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:35 +0800] [3330] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:35 +0800] [3330] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:36 +0800] [3330] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:36 +0800] [3330] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:37 +0800] [3330] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:37 +0800] [3330] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:38 +0800] [3330] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:39 +0800] [3341] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:39 +0800] [3341] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:39 +0800] [3341] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:40 +0800] [3341] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:40 +0800] [3341] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:41 +0800] [3341] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:41 +0800] [3341] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:42 +0800] [3341] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:42 +0800] [3341] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:43 +0800] [3341] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:43 +0800] [3341] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:44 +0800] [3341] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:45 +0800] [3345] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:45 +0800] [3345] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:45 +0800] [3345] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:46 +0800] [3345] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:46 +0800] [3345] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:47 +0800] [3345] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:47 +0800] [3345] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:48 +0800] [3345] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:48 +0800] [3345] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:49 +0800] [3345] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:49 +0800] [3345] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:50 +0800] [3345] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:52 +0800] [3348] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:52 +0800] [3348] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:52 +0800] [3348] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:53 +0800] [3348] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:53 +0800] [3348] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:54 +0800] [3348] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:54 +0800] [3348] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:55 +0800] [3348] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:55 +0800] [3348] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:56 +0800] [3348] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:56 +0800] [3348] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:57 +0800] [3348] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:24:58 +0800] [3359] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:24:58 +0800] [3359] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:58 +0800] [3359] [ERROR] Retrying in 1 second.
+[2020-01-17 15:24:59 +0800] [3359] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:24:59 +0800] [3359] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:00 +0800] [3359] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:00 +0800] [3359] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:01 +0800] [3359] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:01 +0800] [3359] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:02 +0800] [3359] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:02 +0800] [3359] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:03 +0800] [3359] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:04 +0800] [3375] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:04 +0800] [3375] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:04 +0800] [3375] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:05 +0800] [3375] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:05 +0800] [3375] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:06 +0800] [3375] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:06 +0800] [3375] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:07 +0800] [3375] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:07 +0800] [3375] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:08 +0800] [3375] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:08 +0800] [3375] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:09 +0800] [3375] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:10 +0800] [3378] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:10 +0800] [3378] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:10 +0800] [3378] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:11 +0800] [3378] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:11 +0800] [3378] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:12 +0800] [3378] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:12 +0800] [3378] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:13 +0800] [3378] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:13 +0800] [3378] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:14 +0800] [3378] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:14 +0800] [3378] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:15 +0800] [3378] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:16 +0800] [3391] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:16 +0800] [3391] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:16 +0800] [3391] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:17 +0800] [3391] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:17 +0800] [3391] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:18 +0800] [3391] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:18 +0800] [3391] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:19 +0800] [3391] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:19 +0800] [3391] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:20 +0800] [3391] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:20 +0800] [3391] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:21 +0800] [3391] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:23 +0800] [3403] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:23 +0800] [3403] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:23 +0800] [3403] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:24 +0800] [3403] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:24 +0800] [3403] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:25 +0800] [3403] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:25 +0800] [3403] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:26 +0800] [3403] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:26 +0800] [3403] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:27 +0800] [3403] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:27 +0800] [3403] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:28 +0800] [3403] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:29 +0800] [3407] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:29 +0800] [3407] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:29 +0800] [3407] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:30 +0800] [3407] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:30 +0800] [3407] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:31 +0800] [3407] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:31 +0800] [3407] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:32 +0800] [3407] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:32 +0800] [3407] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:33 +0800] [3407] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:33 +0800] [3407] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:34 +0800] [3407] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:35 +0800] [3419] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:35 +0800] [3419] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:35 +0800] [3419] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:36 +0800] [3419] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:36 +0800] [3419] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:37 +0800] [3419] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:37 +0800] [3419] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:38 +0800] [3419] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:38 +0800] [3419] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:39 +0800] [3419] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:39 +0800] [3419] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:40 +0800] [3419] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:41 +0800] [3422] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:41 +0800] [3422] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:41 +0800] [3422] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:42 +0800] [3422] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:42 +0800] [3422] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:43 +0800] [3422] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:43 +0800] [3422] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:44 +0800] [3422] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:44 +0800] [3422] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:45 +0800] [3422] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:45 +0800] [3422] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:46 +0800] [3422] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:48 +0800] [3426] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:48 +0800] [3426] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:48 +0800] [3426] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:49 +0800] [3426] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:49 +0800] [3426] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:50 +0800] [3426] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:50 +0800] [3426] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:51 +0800] [3426] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:51 +0800] [3426] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:52 +0800] [3426] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:52 +0800] [3426] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:53 +0800] [3426] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:25:54 +0800] [3429] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:25:54 +0800] [3429] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:54 +0800] [3429] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:55 +0800] [3429] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:55 +0800] [3429] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:56 +0800] [3429] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:56 +0800] [3429] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:57 +0800] [3429] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:57 +0800] [3429] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:58 +0800] [3429] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:25:58 +0800] [3429] [ERROR] Retrying in 1 second.
+[2020-01-17 15:25:59 +0800] [3429] [ERROR] Can't connect to ('0.0.0.0', 81)
+[2020-01-17 15:26:00 +0800] [3442] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:26:00 +0800] [3442] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:26:00 +0800] [3442] [ERROR] Retrying in 1 second.
+[2020-01-17 15:26:01 +0800] [3442] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:26:01 +0800] [3442] [ERROR] Retrying in 1 second.
+[2020-01-17 15:26:02 +0800] [3442] [ERROR] Connection in use: ('0.0.0.0', 81)
+[2020-01-17 15:26:02 +0800] [3442] [ERROR] Retrying in 1 second.
+[2020-01-17 15:26:03 +0800] [3032] [INFO] Worker exiting (pid: 3032)
+[2020-01-17 15:26:03 +0800] [3033] [INFO] Worker exiting (pid: 3033)
+[2020-01-17 15:26:03 +0800] [3035] [INFO] Worker exiting (pid: 3035)
+[2020-01-17 15:26:03 +0800] [3021] [INFO] Handling signal: term
+[2020-01-17 15:26:03 +0800] [3021] [INFO] Shutting down: Master
+[2020-01-17 15:26:03 +0800] [3442] [INFO] Listening at: http://0.0.0.0:81 (3442)
+[2020-01-17 15:26:03 +0800] [3442] [INFO] Using worker: sync
+[2020-01-17 15:26:03 +0800] [3464] [INFO] Booting worker with pid: 3464
+[2020-01-17 15:26:03 +0800] [3466] [INFO] Booting worker with pid: 3466
+[2020-01-17 15:26:03 +0800] [3467] [INFO] Booting worker with pid: 3467
+[2020-01-17 15:26:03 +0800] [3442] [INFO] Handling signal: term
+[2020-01-17 15:26:04 +0800] [3464] [INFO] Worker exiting (pid: 3464)
+[2020-01-17 15:26:04 +0800] [3466] [INFO] Worker exiting (pid: 3466)
+[2020-01-17 15:26:04 +0800] [3467] [INFO] Worker exiting (pid: 3467)
+[2020-01-17 15:26:04 +0800] [3442] [INFO] Shutting down: Master
+[2020-01-17 15:26:14 +0800] [3480] [INFO] Starting gunicorn 19.9.0
+[2020-01-17 15:26:14 +0800] [3480] [INFO] Listening at: http://0.0.0.0:81 (3480)
+[2020-01-17 15:26:14 +0800] [3480] [INFO] Using worker: sync
+[2020-01-17 15:26:14 +0800] [3483] [INFO] Booting worker with pid: 3483
+[2020-01-17 15:26:14 +0800] [3484] [INFO] Booting worker with pid: 3484
+[2020-01-17 15:26:15 +0800] [3486] [INFO] Booting worker with pid: 3486
+[2020-01-17 15:27:26 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:3486)
+[2020-01-17 15:27:26 +0800] [3486] [INFO] Worker exiting (pid: 3486)
+[2020-01-17 15:27:26 +0800] [3551] [INFO] Booting worker with pid: 3551
+[2020-01-21 15:15:02 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:3551)
+[2020-01-21 15:15:02 +0800] [3551] [INFO] Worker exiting (pid: 3551)
+[2020-01-21 15:15:02 +0800] [16181] [INFO] Booting worker with pid: 16181
+[2020-01-26 09:09:40 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:3483)
+[2020-01-26 09:09:40 +0800] [3483] [INFO] Worker exiting (pid: 3483)
+[2020-01-26 09:09:40 +0800] [21800] [INFO] Booting worker with pid: 21800
+[2020-02-07 10:37:25 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:3484)
+[2020-02-07 10:37:25 +0800] [3484] [INFO] Worker exiting (pid: 3484)
+[2020-02-07 10:37:25 +0800] [26377] [INFO] Booting worker with pid: 26377
+[2020-02-08 03:51:28 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:16181)
+[2020-02-08 03:51:28 +0800] [16181] [INFO] Worker exiting (pid: 16181)
+[2020-02-08 03:51:28 +0800] [32038] [INFO] Booting worker with pid: 32038
+[2020-02-16 12:04:15 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:21800)
+[2020-02-16 12:04:15 +0800] [21800] [INFO] Worker exiting (pid: 21800)
+[2020-02-16 12:04:15 +0800] [2222] [INFO] Booting worker with pid: 2222
+[2020-02-19 21:33:51 +0800] [3480] [CRITICAL] WORKER TIMEOUT (pid:26377)
+[2020-02-19 21:33:51 +0800] [26377] [INFO] Worker exiting (pid: 26377)
+[2020-02-19 21:33:51 +0800] [29432] [INFO] Booting worker with pid: 29432

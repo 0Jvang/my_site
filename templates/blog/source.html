@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% for en, zh in sources %}
+    <a class="colorful_a" href={% url 'blog:download' en %}>{{zh}}</a><br>
+{% endfor %}
+{% endblock main %}
+
