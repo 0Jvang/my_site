@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 cffi==1.11.5
 construct==2.5.3
 cryptography==2.3.1
-Django==1.10.6
+Django==1.11.28
 future==0.17.0
 idna==2.7
 jieba==0.39
